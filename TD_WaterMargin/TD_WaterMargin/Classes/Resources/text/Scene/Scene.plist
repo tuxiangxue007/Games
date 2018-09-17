@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Scene_1</key>
+	<dict>
+		<key>monster</key>
+		<array>
+			<string>11111</string>
+			<string>11112</string>
+			<string>11222</string>
+			<string>11223</string>
+			<string>12223</string>
+		</array>
+		<key>scene</key>
+		<array>
+			<string>1111111111111111111</string>
+			<string>1111111111111111111</string>
+			<string>1111111111111111111</string>
+			<string>1111111111111111111</string>
+			<string>1111111111111111111</string>
+			<string>Y00000000000000000Z</string>
+			<string>1111111111111111111</string>
+			<string>1111111111111111111</string>
+			<string>1111111111111111111</string>
+		</array>
+	</dict>
+</dict>
+</plist>

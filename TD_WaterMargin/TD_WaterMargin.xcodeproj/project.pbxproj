@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04000353214A385500CFF501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04000352214A385500CFF501 /* AppDelegate.swift */; };
+		04000357214A385500CFF501 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 04000356214A385500CFF501 /* Actions.sks */; };
+		0400035B214A385500CFF501 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400035A214A385500CFF501 /* GameViewController.swift */; };
+		0400035E214A385500CFF501 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0400035C214A385500CFF501 /* Main.storyboard */; };
+		04000360214A385800CFF501 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0400035F214A385800CFF501 /* Assets.xcassets */; };
+		04000363214A385800CFF501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04000361214A385800CFF501 /* LaunchScreen.storyboard */; };
+		0400036E214A385800CFF501 /* TD_WaterMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400036D214A385800CFF501 /* TD_WaterMarginTests.swift */; };
+		04000379214A385800CFF501 /* TD_WaterMarginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04000378214A385800CFF501 /* TD_WaterMarginUITests.swift */; };
+		04000399214A390800CFF501 /* attack.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0400038A214A390800CFF501 /* attack.gif */; };
+		0400039A214A390800CFF501 /* towerMove.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0400038B214A390800CFF501 /* towerMove.gif */; };
+		0400039B214A390800CFF501 /* Soldier.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0400038E214A390800CFF501 /* Soldier.plist */; };
+		0400039C214A390800CFF501 /* Scene.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04000391214A390800CFF501 /* Scene.plist */; };
+		0400039D214A390800CFF501 /* Monster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04000393214A390800CFF501 /* Monster.plist */; };
+		0400039E214A390800CFF501 /* TD_GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04000398214A390800CFF501 /* TD_GameScene.swift */; };
+		040003A1214A396300CFF501 /* TD_AnalyticalDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400039F214A396300CFF501 /* TD_AnalyticalDataObject.swift */; };
+		040003A2214A396300CFF501 /* TD_PlayMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040003A0214A396300CFF501 /* TD_PlayMusic.swift */; };
+		040003A4214A3A1300CFF501 /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040003A3214A3A1200CFF501 /* PrefixHeader.swift */; };
+		040003A6214A3F7E00CFF501 /* TD_ScenarioScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040003A5214A3F7E00CFF501 /* TD_ScenarioScene.swift */; };
+		040003A8214A402D00CFF501 /* SceneRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040003A7214A402D00CFF501 /* SceneRecord.plist */; };
+		040003AC214A52DF00CFF501 /* TD_BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040003AB214A52DF00CFF501 /* TD_BaseScene.swift */; };
+		040A8BA8214A5D8900440EF0 /* TD_BaseSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BA7214A5D8900440EF0 /* TD_BaseSpriteNode.swift */; };
+		040A8BB7214A6AB800440EF0 /* TD_SelectScenarioSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BB6214A6AB800440EF0 /* TD_SelectScenarioSprite.swift */; };
+		040A8BB9214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BB8214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift */; };
+		040A8BBB214A6AFE00440EF0 /* TD_MonsterSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BBA214A6AFE00440EF0 /* TD_MonsterSprite.swift */; };
+		040A8BBD214A6BEB00440EF0 /* TD_PathPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BBC214A6BEB00440EF0 /* TD_PathPlanning.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0400036A214A385800CFF501 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04000347214A385500CFF501 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0400034E214A385500CFF501;
+			remoteInfo = TD_WaterMargin;
+		};
+		04000375214A385800CFF501 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04000347214A385500CFF501 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0400034E214A385500CFF501;
+			remoteInfo = TD_WaterMargin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0400034F214A385500CFF501 /* TD_WaterMargin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TD_WaterMargin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04000352214A385500CFF501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04000356214A385500CFF501 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		0400035A214A385500CFF501 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		0400035D214A385500CFF501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0400035F214A385800CFF501 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04000362214A385800CFF501 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04000364214A385800CFF501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04000369214A385800CFF501 /* TD_WaterMarginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TD_WaterMarginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0400036D214A385800CFF501 /* TD_WaterMarginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_WaterMarginTests.swift; sourceTree = "<group>"; };
+		0400036F214A385800CFF501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04000374214A385800CFF501 /* TD_WaterMarginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TD_WaterMarginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04000378214A385800CFF501 /* TD_WaterMarginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_WaterMarginUITests.swift; sourceTree = "<group>"; };
+		0400037A214A385800CFF501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0400038A214A390800CFF501 /* attack.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = attack.gif; sourceTree = "<group>"; };
+		0400038B214A390800CFF501 /* towerMove.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = towerMove.gif; sourceTree = "<group>"; };
+		0400038E214A390800CFF501 /* Soldier.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Soldier.plist; sourceTree = "<group>"; };
+		04000391214A390800CFF501 /* Scene.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Scene.plist; sourceTree = "<group>"; };
+		04000393214A390800CFF501 /* Monster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Monster.plist; sourceTree = "<group>"; };
+		04000398214A390800CFF501 /* TD_GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_GameScene.swift; sourceTree = "<group>"; };
+		0400039F214A396300CFF501 /* TD_AnalyticalDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_AnalyticalDataObject.swift; sourceTree = "<group>"; };
+		040003A0214A396300CFF501 /* TD_PlayMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_PlayMusic.swift; sourceTree = "<group>"; };
+		040003A3214A3A1200CFF501 /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
+		040003A5214A3F7E00CFF501 /* TD_ScenarioScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_ScenarioScene.swift; sourceTree = "<group>"; };
+		040003A7214A402D00CFF501 /* SceneRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SceneRecord.plist; sourceTree = "<group>"; };
+		040003AB214A52DF00CFF501 /* TD_BaseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_BaseScene.swift; sourceTree = "<group>"; };
+		040A8BA7214A5D8900440EF0 /* TD_BaseSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_BaseSpriteNode.swift; sourceTree = "<group>"; };
+		040A8BB6214A6AB800440EF0 /* TD_SelectScenarioSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_SelectScenarioSprite.swift; sourceTree = "<group>"; };
+		040A8BB8214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_DefensiveTowersSprite.swift; sourceTree = "<group>"; };
+		040A8BBA214A6AFE00440EF0 /* TD_MonsterSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_MonsterSprite.swift; sourceTree = "<group>"; };
+		040A8BBC214A6BEB00440EF0 /* TD_PathPlanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_PathPlanning.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0400034C214A385500CFF501 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04000366214A385800CFF501 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04000371214A385800CFF501 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04000346214A385500CFF501 = {
+			isa = PBXGroup;
+			children = (
+				04000351214A385500CFF501 /* TD_WaterMargin */,
+				0400036C214A385800CFF501 /* TD_WaterMarginTests */,
+				04000377214A385800CFF501 /* TD_WaterMarginUITests */,
+				04000350214A385500CFF501 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04000350214A385500CFF501 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0400034F214A385500CFF501 /* TD_WaterMargin.app */,
+				04000369214A385800CFF501 /* TD_WaterMarginTests.xctest */,
+				04000374214A385800CFF501 /* TD_WaterMarginUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04000351214A385500CFF501 /* TD_WaterMargin */ = {
+			isa = PBXGroup;
+			children = (
+				04000386214A390800CFF501 /* Classes */,
+				04000352214A385500CFF501 /* AppDelegate.swift */,
+				04000356214A385500CFF501 /* Actions.sks */,
+				0400035A214A385500CFF501 /* GameViewController.swift */,
+				040003A3214A3A1200CFF501 /* PrefixHeader.swift */,
+				0400035C214A385500CFF501 /* Main.storyboard */,
+				0400035F214A385800CFF501 /* Assets.xcassets */,
+				04000361214A385800CFF501 /* LaunchScreen.storyboard */,
+				04000364214A385800CFF501 /* Info.plist */,
+			);
+			path = TD_WaterMargin;
+			sourceTree = "<group>";
+		};
+		0400036C214A385800CFF501 /* TD_WaterMarginTests */ = {
+			isa = PBXGroup;
+			children = (
+				0400036D214A385800CFF501 /* TD_WaterMarginTests.swift */,
+				0400036F214A385800CFF501 /* Info.plist */,
+			);
+			path = TD_WaterMarginTests;
+			sourceTree = "<group>";
+		};
+		04000377214A385800CFF501 /* TD_WaterMarginUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04000378214A385800CFF501 /* TD_WaterMarginUITests.swift */,
+				0400037A214A385800CFF501 /* Info.plist */,
+			);
+			path = TD_WaterMarginUITests;
+			sourceTree = "<group>";
+		};
+		04000386214A390800CFF501 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				04000387214A390800CFF501 /* Resources */,
+				04000394214A390800CFF501 /* View */,
+				04000395214A390800CFF501 /* Sprite */,
+				04000396214A390800CFF501 /* Lib */,
+				04000397214A390800CFF501 /* Scene */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		04000387214A390800CFF501 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04000388214A390800CFF501 /* Image */,
+				0400038C214A390800CFF501 /* text */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04000388214A390800CFF501 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				04000389214A390800CFF501 /* Gif */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		04000389214A390800CFF501 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				0400038A214A390800CFF501 /* attack.gif */,
+				0400038B214A390800CFF501 /* towerMove.gif */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
+		0400038C214A390800CFF501 /* text */ = {
+			isa = PBXGroup;
+			children = (
+				0400038D214A390800CFF501 /* Soldier */,
+				0400038F214A390800CFF501 /* Guard */,
+				04000390214A390800CFF501 /* Scene */,
+				04000392214A390800CFF501 /* Monster */,
+			);
+			path = text;
+			sourceTree = "<group>";
+		};
+		0400038D214A390800CFF501 /* Soldier */ = {
+			isa = PBXGroup;
+			children = (
+				0400038E214A390800CFF501 /* Soldier.plist */,
+			);
+			path = Soldier;
+			sourceTree = "<group>";
+		};
+		0400038F214A390800CFF501 /* Guard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Guard;
+			sourceTree = "<group>";
+		};
+		04000390214A390800CFF501 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				040003A7214A402D00CFF501 /* SceneRecord.plist */,
+				04000391214A390800CFF501 /* Scene.plist */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		04000392214A390800CFF501 /* Monster */ = {
+			isa = PBXGroup;
+			children = (
+				04000393214A390800CFF501 /* Monster.plist */,
+			);
+			path = Monster;
+			sourceTree = "<group>";
+		};
+		04000394214A390800CFF501 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04000395214A390800CFF501 /* Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				040A8BA7214A5D8900440EF0 /* TD_BaseSpriteNode.swift */,
+				040A8BB6214A6AB800440EF0 /* TD_SelectScenarioSprite.swift */,
+				040A8BB8214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift */,
+				040A8BBA214A6AFE00440EF0 /* TD_MonsterSprite.swift */,
+			);
+			path = Sprite;
+			sourceTree = "<group>";
+		};
+		04000396214A390800CFF501 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				0400039F214A396300CFF501 /* TD_AnalyticalDataObject.swift */,
+				040003A0214A396300CFF501 /* TD_PlayMusic.swift */,
+				040A8BBC214A6BEB00440EF0 /* TD_PathPlanning.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		04000397214A390800CFF501 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				04000398214A390800CFF501 /* TD_GameScene.swift */,
+				040003A5214A3F7E00CFF501 /* TD_ScenarioScene.swift */,
+				040003AB214A52DF00CFF501 /* TD_BaseScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0400034E214A385500CFF501 /* TD_WaterMargin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0400037D214A385800CFF501 /* Build configuration list for PBXNativeTarget "TD_WaterMargin" */;
+			buildPhases = (
+				0400034B214A385500CFF501 /* Sources */,
+				0400034C214A385500CFF501 /* Frameworks */,
+				0400034D214A385500CFF501 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TD_WaterMargin;
+			productName = TD_WaterMargin;
+			productReference = 0400034F214A385500CFF501 /* TD_WaterMargin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04000368214A385800CFF501 /* TD_WaterMarginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04000380214A385800CFF501 /* Build configuration list for PBXNativeTarget "TD_WaterMarginTests" */;
+			buildPhases = (
+				04000365214A385800CFF501 /* Sources */,
+				04000366214A385800CFF501 /* Frameworks */,
+				04000367214A385800CFF501 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0400036B214A385800CFF501 /* PBXTargetDependency */,
+			);
+			name = TD_WaterMarginTests;
+			productName = TD_WaterMarginTests;
+			productReference = 04000369214A385800CFF501 /* TD_WaterMarginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04000373214A385800CFF501 /* TD_WaterMarginUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04000383214A385800CFF501 /* Build configuration list for PBXNativeTarget "TD_WaterMarginUITests" */;
+			buildPhases = (
+				04000370214A385800CFF501 /* Sources */,
+				04000371214A385800CFF501 /* Frameworks */,
+				04000372214A385800CFF501 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04000376214A385800CFF501 /* PBXTargetDependency */,
+			);
+			name = TD_WaterMarginUITests;
+			productName = TD_WaterMarginUITests;
+			productReference = 04000374214A385800CFF501 /* TD_WaterMarginUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04000347214A385500CFF501 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = DAA;
+				TargetAttributes = {
+					0400034E214A385500CFF501 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					04000368214A385800CFF501 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 0400034E214A385500CFF501;
+					};
+					04000373214A385800CFF501 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 0400034E214A385500CFF501;
+					};
+				};
+			};
+			buildConfigurationList = 0400034A214A385500CFF501 /* Build configuration list for PBXProject "TD_WaterMargin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04000346214A385500CFF501;
+			productRefGroup = 04000350214A385500CFF501 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0400034E214A385500CFF501 /* TD_WaterMargin */,
+				04000368214A385800CFF501 /* TD_WaterMarginTests */,
+				04000373214A385800CFF501 /* TD_WaterMarginUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0400034D214A385500CFF501 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040003A8214A402D00CFF501 /* SceneRecord.plist in Resources */,
+				0400035E214A385500CFF501 /* Main.storyboard in Resources */,
+				0400039B214A390800CFF501 /* Soldier.plist in Resources */,
+				04000360214A385800CFF501 /* Assets.xcassets in Resources */,
+				04000363214A385800CFF501 /* LaunchScreen.storyboard in Resources */,
+				0400039D214A390800CFF501 /* Monster.plist in Resources */,
+				0400039C214A390800CFF501 /* Scene.plist in Resources */,
+				04000399214A390800CFF501 /* attack.gif in Resources */,
+				04000357214A385500CFF501 /* Actions.sks in Resources */,
+				0400039A214A390800CFF501 /* towerMove.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04000367214A385800CFF501 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04000372214A385800CFF501 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0400034B214A385500CFF501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				040A8BB9214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift in Sources */,
+				040A8BB7214A6AB800440EF0 /* TD_SelectScenarioSprite.swift in Sources */,
+				0400039E214A390800CFF501 /* TD_GameScene.swift in Sources */,
+				040003A4214A3A1300CFF501 /* PrefixHeader.swift in Sources */,
+				040A8BBD214A6BEB00440EF0 /* TD_PathPlanning.swift in Sources */,
+				040A8BA8214A5D8900440EF0 /* TD_BaseSpriteNode.swift in Sources */,
+				040003A1214A396300CFF501 /* TD_AnalyticalDataObject.swift in Sources */,
+				040003A6214A3F7E00CFF501 /* TD_ScenarioScene.swift in Sources */,
+				040A8BBB214A6AFE00440EF0 /* TD_MonsterSprite.swift in Sources */,
+				040003A2214A396300CFF501 /* TD_PlayMusic.swift in Sources */,
+				040003AC214A52DF00CFF501 /* TD_BaseScene.swift in Sources */,
+				0400035B214A385500CFF501 /* GameViewController.swift in Sources */,
+				04000353214A385500CFF501 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04000365214A385800CFF501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0400036E214A385800CFF501 /* TD_WaterMarginTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04000370214A385800CFF501 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04000379214A385800CFF501 /* TD_WaterMarginUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0400036B214A385800CFF501 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0400034E214A385500CFF501 /* TD_WaterMargin */;
+			targetProxy = 0400036A214A385800CFF501 /* PBXContainerItemProxy */;
+		};
+		04000376214A385800CFF501 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0400034E214A385500CFF501 /* TD_WaterMargin */;
+			targetProxy = 04000375214A385800CFF501 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0400035C214A385500CFF501 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0400035D214A385500CFF501 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04000361214A385800CFF501 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04000362214A385800CFF501 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0400037B214A385800CFF501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0400037C214A385800CFF501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0400037E214A385800CFF501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZJMBSB9WS;
+				INFOPLIST_FILE = TD_WaterMargin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-WaterMargin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0400037F214A385800CFF501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GZJMBSB9WS;
+				INFOPLIST_FILE = TD_WaterMargin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-WaterMargin";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04000381214A385800CFF501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TD_WaterMarginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-WaterMarginTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TD_WaterMargin.app/TD_WaterMargin";
+			};
+			name = Debug;
+		};
+		04000382214A385800CFF501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TD_WaterMarginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-WaterMarginTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TD_WaterMargin.app/TD_WaterMargin";
+			};
+			name = Release;
+		};
+		04000384214A385800CFF501 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TD_WaterMarginUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-WaterMarginUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TD_WaterMargin;
+			};
+			name = Debug;
+		};
+		04000385214A385800CFF501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TD_WaterMarginUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-WaterMarginUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TD_WaterMargin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0400034A214A385500CFF501 /* Build configuration list for PBXProject "TD_WaterMargin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0400037B214A385800CFF501 /* Debug */,
+				0400037C214A385800CFF501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0400037D214A385800CFF501 /* Build configuration list for PBXNativeTarget "TD_WaterMargin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0400037E214A385800CFF501 /* Debug */,
+				0400037F214A385800CFF501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04000380214A385800CFF501 /* Build configuration list for PBXNativeTarget "TD_WaterMarginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04000381214A385800CFF501 /* Debug */,
+				04000382214A385800CFF501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04000383214A385800CFF501 /* Build configuration list for PBXNativeTarget "TD_WaterMarginUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04000384214A385800CFF501 /* Debug */,
+				04000385214A385800CFF501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04000347214A385500CFF501 /* Project object */;
+}
