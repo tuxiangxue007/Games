@@ -27,11 +27,14 @@
 		040003A6214A3F7E00CFF501 /* TD_ScenarioScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040003A5214A3F7E00CFF501 /* TD_ScenarioScene.swift */; };
 		040003A8214A402D00CFF501 /* SceneRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040003A7214A402D00CFF501 /* SceneRecord.plist */; };
 		040003AC214A52DF00CFF501 /* TD_BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040003AB214A52DF00CFF501 /* TD_BaseScene.swift */; };
+		0408244F215097A6005CAE6C /* monsterMove_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0408244E215097A6005CAE6C /* monsterMove_1.gif */; };
 		040A8BA8214A5D8900440EF0 /* TD_BaseSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BA7214A5D8900440EF0 /* TD_BaseSpriteNode.swift */; };
 		040A8BB7214A6AB800440EF0 /* TD_SelectScenarioSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BB6214A6AB800440EF0 /* TD_SelectScenarioSprite.swift */; };
 		040A8BB9214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BB8214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift */; };
 		040A8BBB214A6AFE00440EF0 /* TD_MonsterSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BBA214A6AFE00440EF0 /* TD_MonsterSprite.swift */; };
 		040A8BBD214A6BEB00440EF0 /* TD_PathPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BBC214A6BEB00440EF0 /* TD_PathPlanning.swift */; };
+		040A8BC2214F873700440EF0 /* TD_TowerSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BC1214F873700440EF0 /* TD_TowerSprite.swift */; };
+		040A8BC4214F8DF000440EF0 /* Towers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040A8BC3214F8DF000440EF0 /* Towers.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,11 +81,14 @@
 		040003A5214A3F7E00CFF501 /* TD_ScenarioScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_ScenarioScene.swift; sourceTree = "<group>"; };
 		040003A7214A402D00CFF501 /* SceneRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SceneRecord.plist; sourceTree = "<group>"; };
 		040003AB214A52DF00CFF501 /* TD_BaseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_BaseScene.swift; sourceTree = "<group>"; };
+		0408244E215097A6005CAE6C /* monsterMove_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = monsterMove_1.gif; sourceTree = "<group>"; };
 		040A8BA7214A5D8900440EF0 /* TD_BaseSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_BaseSpriteNode.swift; sourceTree = "<group>"; };
 		040A8BB6214A6AB800440EF0 /* TD_SelectScenarioSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_SelectScenarioSprite.swift; sourceTree = "<group>"; };
 		040A8BB8214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_DefensiveTowersSprite.swift; sourceTree = "<group>"; };
 		040A8BBA214A6AFE00440EF0 /* TD_MonsterSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_MonsterSprite.swift; sourceTree = "<group>"; };
 		040A8BBC214A6BEB00440EF0 /* TD_PathPlanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_PathPlanning.swift; sourceTree = "<group>"; };
+		040A8BC1214F873700440EF0 /* TD_TowerSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_TowerSprite.swift; sourceTree = "<group>"; };
+		040A8BC3214F8DF000440EF0 /* Towers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Towers.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +202,7 @@
 		04000389214A390800CFF501 /* Gif */ = {
 			isa = PBXGroup;
 			children = (
+				0408244E215097A6005CAE6C /* monsterMove_1.gif */,
 				0400038A214A390800CFF501 /* attack.gif */,
 				0400038B214A390800CFF501 /* towerMove.gif */,
 			);
@@ -205,6 +212,7 @@
 		0400038C214A390800CFF501 /* text */ = {
 			isa = PBXGroup;
 			children = (
+				040A8BBE214F809F00440EF0 /* Towers */,
 				0400038D214A390800CFF501 /* Soldier */,
 				0400038F214A390800CFF501 /* Guard */,
 				04000390214A390800CFF501 /* Scene */,
@@ -259,6 +267,7 @@
 				040A8BB6214A6AB800440EF0 /* TD_SelectScenarioSprite.swift */,
 				040A8BB8214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift */,
 				040A8BBA214A6AFE00440EF0 /* TD_MonsterSprite.swift */,
+				040A8BC1214F873700440EF0 /* TD_TowerSprite.swift */,
 			);
 			path = Sprite;
 			sourceTree = "<group>";
@@ -281,6 +290,14 @@
 				040003AB214A52DF00CFF501 /* TD_BaseScene.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		040A8BBE214F809F00440EF0 /* Towers */ = {
+			isa = PBXGroup;
+			children = (
+				040A8BC3214F8DF000440EF0 /* Towers.plist */,
+			);
+			path = Towers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,9 +404,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0408244F215097A6005CAE6C /* monsterMove_1.gif in Resources */,
 				040003A8214A402D00CFF501 /* SceneRecord.plist in Resources */,
 				0400035E214A385500CFF501 /* Main.storyboard in Resources */,
 				0400039B214A390800CFF501 /* Soldier.plist in Resources */,
+				040A8BC4214F8DF000440EF0 /* Towers.plist in Resources */,
 				04000360214A385800CFF501 /* Assets.xcassets in Resources */,
 				04000363214A385800CFF501 /* LaunchScreen.storyboard in Resources */,
 				0400039D214A390800CFF501 /* Monster.plist in Resources */,
@@ -433,6 +452,7 @@
 				040003A2214A396300CFF501 /* TD_PlayMusic.swift in Sources */,
 				040003AC214A52DF00CFF501 /* TD_BaseScene.swift in Sources */,
 				0400035B214A385500CFF501 /* GameViewController.swift in Sources */,
+				040A8BC2214F873700440EF0 /* TD_TowerSprite.swift in Sources */,
 				04000353214A385500CFF501 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,8 @@ class TD_PathPlanning: NSObject {
     var formattingStartRect = CGRect()
     var formattingEndRect = CGRect()
     
+    var mapStartPoint = CGPoint()
+    
     var mapData = [NSArray]()
     //swift中闭包传值
     func getPathPlanning(completion: @escaping (_ result : [Any])->()) -> () {
@@ -36,8 +38,9 @@ class TD_PathPlanning: NSObject {
         // 在Swift3.0中所有的闭包都默认为非逃逸闭包，所以需要用@escaping来修饰
         DispatchQueue.global().async {
             print("耗时操作\(Thread.current)")
-
-//            self.mapData = self.getMapDict(width: self.width)
+            if (self.mapData.count < 1){
+                self.mapData = self.getMapDict(width: self.width)
+            }
             
             let paths = self.getPathPlanning()
             
@@ -80,11 +83,11 @@ class TD_PathPlanning: NSObject {
     func getPathPlanning() -> NSArray {
 
         
-        let startI = Int(startRect.origin.x / width)
-        let startJ = Int(startRect.origin.y / width)
+        let startI = Int((startRect.origin.x - mapStartPoint.x) / width)
+        let startJ = mapData.count - Int((startRect.origin.y - mapStartPoint.y) / width)
         
-        let endI = Int(endRect.origin.x / width)
-        let endJ = Int(endRect.origin.y / width)
+        let endI = Int((endRect.origin.x - mapStartPoint.x) / width)
+        let endJ = mapData.count - Int((endRect.origin.y - mapStartPoint.y) / width)
         
         formattingStartRect = CGRect(x: width * CGFloat(startI) , y: CGFloat(startJ) * width , width: width, height: width)
         formattingEndRect = CGRect(x: width * CGFloat(endI) , y: CGFloat(endJ) * width , width: width, height: width)
@@ -107,12 +110,13 @@ class TD_PathPlanning: NSObject {
         var min_y = 0
         
         let data = minData.first
+        
         for item in data! {
             closedDict[item.key] = item.value
             min_x = item.key / 100
             min_y = item.key % 100
         }
-
+        
         
         for i in 0..<4 {
             var index_i = min_x
@@ -120,14 +124,15 @@ class TD_PathPlanning: NSObject {
             var isEffective = true
             switch i {
             case 0://上
-                index_j = index_j + 1
-                if mapData[index_i].count <= index_j {
+                index_j = index_j - 1
+                if index_j < 0 {
                     isEffective = false
                 }
                 break
             case 1://下
-                index_j = index_j - 1
-                if index_j < 0 {
+                index_j = index_j + 1
+                
+                if mapData.count <= index_j {
                     isEffective = false
                 }
                 break
@@ -139,21 +144,19 @@ class TD_PathPlanning: NSObject {
                 break
             case 3://右
                 index_i = index_i + 1
-                if mapData.count <= index_i {
+                if mapData[index_j].count <= index_i {
                     isEffective = false
                 }
                 break
             default:
                 break
             }
-            
-            if isEffective && mapData[index_i][index_j] as! Int == 0{
-                let point =  CGPoint(x: width * CGFloat(index_i) , y: CGFloat(index_j) * width)
+            let point =  CGPoint(x: width * CGFloat(index_i), y: CGFloat(index_j) * width)
+            if point.x == formattingEndRect.origin.x && point.y == formattingEndRect.origin.y{//到达目的地
+                closedDict[index_i * 100 + index_j] = ["G":0.0,"H":0,"F":0]
+                return getOptimalPath(closedDict: closedDict)
+            }else if isEffective && mapData[index_j][index_i] as! Character == "0"{
                 
-                if point.x == formattingEndRect.origin.x && point.y == formattingEndRect.origin.y{
-        
-                    return getOptimalPath(closedDict: closedDict)
-                }
                 
                 let G = getDistance(point1: point, point2: CGPoint(x: formattingStartRect.origin.x, y: formattingStartRect.origin.y))
                 let H = getDistance(point1: point, point2: CGPoint(x: formattingEndRect.origin.x, y: formattingEndRect.origin.y))
@@ -178,8 +181,8 @@ class TD_PathPlanning: NSObject {
         let paths = NSMutableArray()
         
         
-        var X = Int(endRect.origin.x / width)
-        var Y = Int(endRect.origin.y / width)
+        var X = Int(formattingEndRect.origin.x / width)
+        var Y = Int(formattingEndRect.origin.y / width)
         paths.add(100 * X + Y)
         for _ in 0..<closedDict.count {
             var minF = 1000.0
@@ -263,7 +266,8 @@ class TD_PathPlanning: NSObject {
         for index in 0..<paths.count {
             let item = paths[paths.count - 1 - index] as! Int
             let point = CGPoint(x: CGFloat(item / 100) * width, y: CGFloat(item % 100) * width)
-            rcList.add(CGRect(x: point.x, y: point.y, width: width, height: width))
+//            rcList.add(CGRect(x: point.x, y: point.y, width: width, height: width))
+            rcList.add(point)
         }
         
         

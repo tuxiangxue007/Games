@@ -13,7 +13,7 @@ class TD_PlayMusic: SKNode {
 
     
     func playMusic(musicName:String){
-        let backgroundMusicURL = Bundle.main.url(forResource: "", withExtension: nil)
+        let backgroundMusicURL = Bundle.main.url(forResource: musicName, withExtension: nil)
         
         let theme = try! AVAudioPlayer(contentsOf: backgroundMusicURL!)
 //            if !GameScene.backgroundMusicPlayer.isPlaying {

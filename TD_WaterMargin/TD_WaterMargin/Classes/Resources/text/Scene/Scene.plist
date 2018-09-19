@@ -4,6 +4,8 @@
 <dict>
 	<key>Scene_1</key>
 	<dict>
+		<key>HP</key>
+		<string>10</string>
 		<key>monster</key>
 		<array>
 			<string>11111</string>
@@ -16,10 +18,10 @@
 		<array>
 			<string>1111111111111111111</string>
 			<string>1111111111111111111</string>
-			<string>1111111111111111111</string>
-			<string>1111111111111111111</string>
-			<string>1111111111111111111</string>
-			<string>Y00000000000000000Z</string>
+			<string>1100000011111111111</string>
+			<string>1101111011111111111</string>
+			<string>1101111011111111111</string>
+			<string>Y00111100000000000Z</string>
 			<string>1111111111111111111</string>
 			<string>1111111111111111111</string>
 			<string>1111111111111111111</string>

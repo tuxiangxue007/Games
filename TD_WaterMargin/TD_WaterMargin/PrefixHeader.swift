@@ -46,12 +46,11 @@ let TD_MoveToSprite = "TD_MoveToSprite"     //移动到指定士兵 action key
 
 //TD_WorldCategory
 let TD_WorldCategory            : UInt32 = 0x1 << 1                     //屏幕边缘
-let TD_RoadCategory             : UInt32 = 0x1 << 2                     //道路边缘
-let TD_TowerCategory            : UInt32 = 0x1 << 3                     //城堡
-let TD_Soldier1Category         : UInt32 = 0x1 << 4                     //士兵(我方)
-let TD_Soldier2Category         : UInt32 = 0x1 << 5                     //士兵(敌方)
-let TD_AlertCategory            : UInt32 = 0x1 << 6                     //警戒范围
-let TD_AttackCategory           : UInt32 = 0x1 << 7                     //攻击范围
+let TD_TowerCategory            : UInt32 = 0x1 << 2                     //防御塔
+let TD_MonsterCategory          : UInt32 = 0x1 << 3                     //怪物
+let TD_TowerAttackCategory      : UInt32 = 0x1 << 4                     //防御塔攻击范围
+let TD_AlertCategory            : UInt32 = 0x1 << 5                     //怪物警戒范围
+let TD_AttackCategory           : UInt32 = 0x1 << 6                     //怪物攻击范围
 
 //struct PhysicsCategory {
 //    static let Crocodile: UInt32 = 1
@@ -60,5 +59,17 @@ let TD_AttackCategory           : UInt32 = 0x1 << 7                     //攻击
 //    static let Prize: UInt32 = 8
 //}
 
+
+let TD_Name_Clearing = "clearing"                       //空地
+let TD_Name_Tower = "tower"                             //防御塔
+let TD_Name_ScopeAttack = "scopeAttack"                 //防御塔攻击范围
+let TD_Name_CountdownLab = "countdownLab"               //出怪倒计时Lab
+let TD_Name_HPLab = "HPLab"                             //关卡血量显示Lab
+let TD_Name_EnergyLab = "energyLab"                     //出怪倒计时Lab
+let TD_Name_ConfirmItem = "confirm"                     //确认建造按钮
+let TD_Name_CancelItem = "cancel"                       //取消建造按钮
+let TD_Name_UpgradeItem = "upgrade"                     //升级建筑按钮
+let TD_Name_SellItem = "sell"                           //卖出建筑按钮
+let TD_Name_ReturnItem = "return"                       //返回按钮
 
 
