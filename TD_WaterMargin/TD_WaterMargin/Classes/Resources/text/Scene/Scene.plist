@@ -4,6 +4,8 @@
 <dict>
 	<key>Scene_1</key>
 	<dict>
+		<key>Energy</key>
+		<string>100</string>
 		<key>HP</key>
 		<string>10</string>
 		<key>monster</key>
@@ -23,6 +25,33 @@
 			<string>1101111011111111111</string>
 			<string>Y00111100000000000Z</string>
 			<string>1111111111111111111</string>
+			<string>1111111111111111111</string>
+			<string>1111111111111111111</string>
+		</array>
+	</dict>
+	<key>Scene_2</key>
+	<dict>
+		<key>Energy</key>
+		<string>100</string>
+		<key>HP</key>
+		<string>10</string>
+		<key>monster</key>
+		<array>
+			<string>11223</string>
+			<string>11112</string>
+			<string>11222</string>
+			<string>11223</string>
+			<string>12223</string>
+		</array>
+		<key>scene</key>
+		<array>
+			<string>1111111111111111111</string>
+			<string>1111111111111111111</string>
+			<string>1100000011111111111</string>
+			<string>1101111011111111111</string>
+			<string>1101100011111111111</string>
+			<string>Y001101111111111111</string>
+			<string>111110000000000000Z</string>
 			<string>1111111111111111111</string>
 			<string>1111111111111111111</string>
 		</array>

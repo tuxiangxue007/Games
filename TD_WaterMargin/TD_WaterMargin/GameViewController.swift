@@ -13,7 +13,7 @@ import GameplayKit
 class GameViewController: UIViewController {
     var scenarioScene = TD_ScenarioScene()
     var selScenarioScene = TD_GameScene()
-    
+    var scenarioIndex = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         if let view = self.view as! SKView? {
@@ -32,6 +32,7 @@ class GameViewController: UIViewController {
     func showScenarioScene(index:Int){
         
         if let view = self.view as! SKView? {
+            scenarioIndex = index
             scenarioScene.scenarioIndex = index
             view.presentScene(scenarioScene)
         }
@@ -47,6 +48,23 @@ class GameViewController: UIViewController {
         let alert = UIAlertController(title: _title, message: _message, preferredStyle: UIAlertControllerStyle.alert)
         let btnOK = UIAlertAction(title: "好的", style: .default, handler: nil)
         alert.addAction(btnOK)
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    func showMsgbox(_message: String, _title: String, okTitle:String, cancelTitle:String,tag:Int){
+        
+        let alert = UIAlertController(title: _title, message: _message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let btnOK = UIAlertAction(title: okTitle, style: .default) { (action) in
+            if tag == 1{
+                self.scenarioIndex = self.scenarioIndex + 1
+                self.scenarioScene.scenarioIndex = self.scenarioIndex + 1
+                self.scenarioScene.refreshScene(scenarioIndex: self.scenarioIndex)
+            }
+        }
+        let btnCancel = UIAlertAction(title: cancelTitle, style: .default, handler: nil)
+        alert.addAction(btnOK)
+        alert.addAction(btnCancel)
         self.present(alert, animated: true, completion: nil)
         
     }

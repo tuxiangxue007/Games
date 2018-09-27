@@ -37,11 +37,11 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
     var towersList = [TD_TowerSprite]()                 //记录防御塔数组
     var monsterSpriteList = [TD_MonsterSprite]()        //记录场上怪物的数组
     
-    var countdown = 60                                  //出怪倒计时
+    var countdown = 10                                  //出怪倒计时
     var countdownLab = SKLabelNode()                    //出怪倒计时显示控件
     var HP = 0.0                                        //关卡中血量
     var hpLab = SKLabelNode()                           //关卡血量显示控件
-    var energy = 100.0                                  //关卡中血量
+    var energy = 100.0                                  //剩余能量
     var energyLab = SKLabelNode()                       //剩余能量显示控件
     
     override func didMove(to view: SKView) {
@@ -49,16 +49,29 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
         
         
         allSceneData = TD_AnalyticalDataObject().getFileData(fileName: "Scene") as! [String : NSDictionary]
-        towersData = TD_AnalyticalDataObject().getFileData(fileName: "Towers") as! [String : NSDictionary]
+        towersData = TD_AnalyticalDataObject().getFileData(fileName: "TowerList") as! [String : NSDictionary]
         creatScene();
     }
+    func goToTheNextLevel(){
+        
+    }
     
+    func refresh() {
+        for node in children {
+            node.removeFromParent()
+        }
+        countdown = 10
+        creatScene()
+    }
     func creatScene() {
+        
+        
         
         
         let data = allSceneData[String(format: "Scene_%d", scenarioIndex)] as! NSDictionary
         
         HP = Double(data["HP"] as! String)!
+        energy = Double(data["Energy"] as! String)!
 
         let sceneData = data["scene"] as! NSArray
         monsterData = data["monster"] as! [String]
@@ -106,6 +119,7 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
             }
             mapData.append(lineData)
         }
+    
         
         selClearBlockSprite = SKSpriteNode(color: UIColor.green, size: CGSize(width: TD_Block_Width, height: TD_Block_Width))
         selClearBlockSprite.isHidden = true
@@ -154,25 +168,43 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
                 selTowerSprite.hiddenConfirmBuild()
                 
                 
-                
-                let data = towersData[String(format: "Towers_%d", selTowerSprite.towerType)] as! NSDictionary
+                let data = towersData[String(format: "Towers_%d_1", selTowerSprite.towerType)] as! NSDictionary
                 let expenditure = Double(data["Expenditure"] as! String)
                 energy = energy - expenditure!
                 energyLab.text = String(energy)
-            }else if node.name == TD_Name_ConfirmItem{
-                selTowerSprite.removeAllFromParent()
+            }else if node.name == TD_Name_CancelItem{
+                destroyed(tower: selTowerSprite)
                 isBeingBuilt = false
                 
-                let index = towersList.index(of: selTowerSprite)
-                if index != nil{
-                    towersList.append(selTowerSprite)
-                }
+                
             }else if node.name == TD_Name_UpgradeItem{
+                
+                if selTowerSprite.level < selTowerSprite.maxLevel{
+                    if energy - selTowerSprite.upExpenditure >= 0{
+                        energy = energy - selTowerSprite.upExpenditure
+                        energyLab.text = String(energy)
+                        selTowerSprite.level = selTowerSprite.level + 1
+                        selTowerSprite.refresh()
+                        selTowerSprite.totalValue = selTowerSprite.totalValue + selTowerSprite.upExpenditure
+                        print("selTowerSprite.totalValue:",selTowerSprite.totalValue)
+                    }else{
+                        (viewController as! GameViewController).showMsgbox(_message: "能量不足")
+                    }
+                }else{
+                    (viewController as! GameViewController).showMsgbox(_message: "该防御塔已经是最顶级")
+                }
+                
                 selTowerSprite.hiddenOperationMenuView()
             }else if node.name == TD_Name_SellItem{
+                
+                energy = energy + selTowerSprite.totalValue * 0.5
+                energyLab.text = String(energy)
                 selTowerSprite.hiddenOperationMenuView()
+                destroyed(tower: selTowerSprite)
             }else if node.name == TD_Name_ReturnItem{
                 selTowerSprite.hiddenOperationMenuView()
+            }else{
+                isBeingBuilt = true
             }
             return
         }
@@ -186,48 +218,60 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
             towersMenuView.isHidden = true
             selClearBlockSprite.isHidden = true
             if (node.name?.hasPrefix("CreatMenu_"))! {//判断是建造菜单按钮
-                let towerType = Int(String((node.name?.last)!))
-                let data = towersData[String(format: "Towers_%d", towerType!)] as! NSDictionary
-                let expenditure = Double(data["Expenditure"] as! String)
-                if energy >= expenditure!{
-                    
-                    
+                if node.name == "CreatMenu_Cencel"{//建造菜单取消按钮
                     towersMenuView.isHidden = true
+                }else{
                     let name = node.name! as NSString
-                    let img = name.substring(from: 10)
-                    let towerSprite = TD_TowerSprite(imageNamed: img)
-                    towerSprite.name = TD_Name_Tower
-                    towerSprite.alpha = 0.4
-                    towerSprite.position = selClearBlockSprite.position
-                    towerSprite.size = selClearBlockSprite.size
-                    towerSprite.superScene = self
-                    
-                    addChild(towerSprite)
-                    towerSprite.layout(towerType: Int(String(name.substring(from: 17).first!))!)
-                    towersList.append(towerSprite)
-                    selTowerSprite = towerSprite
-                    isBeingBuilt = true
-                    
-                    towerSprite.showScopeAttack()
-                    towerSprite.showConfirmBuild()
-                }else{//能量不足
-                    (viewController as! GameViewController).showMsgbox(_message: "能量不足")
+                    let towerType = Int(String(name.substring(from: 17).first!))
+                    let data = towersData[String(format: "Towers_%d_1", towerType!)] as! NSDictionary
+                    let expenditure = Double(data["Expenditure"] as! String)
+                    if energy >= expenditure!{
+                        
+                        
+                        towersMenuView.isHidden = true
+                        
+                        //                    let img = name.substring(from: 10)
+                        let towerSprite = TD_TowerSprite(color: UIColor.clear, size: selClearBlockSprite.size)
+                        towerSprite.name = TD_Name_Tower
+                        towerSprite.alpha = 0.4
+                        towerSprite.position = selClearBlockSprite.position
+                        towerSprite.superScene = self
+                        towerSprite.totalValue = expenditure!
+                        addChild(towerSprite)
+                        towerSprite.layout(towerType: Int(String(name.substring(from: 17).first!))!)
+                        towersList.append(towerSprite)
+                        selTowerSprite = towerSprite
+                        isBeingBuilt = true
+                        
+                        towerSprite.showScopeAttack()
+                        towerSprite.showConfirmBuild()
+                    }else{//能量不足
+                        (viewController as! GameViewController).showMsgbox(_message: "能量不足")
+                    }
                 }
-                
                 
             }else if node.name == TD_Name_CountdownLab{//点击出怪倒计时
                 if self.countdown > 3{
                     self.countdown = 3
                 }
                 
-            }else if node.name == TD_Name_Tower{//点击防御塔
+            }else if node.name == TD_Name_TowerSprite{//点击防御塔实例
                 isBeingBuilt = true
-                selTowerSprite = node as! TD_TowerSprite
+                selTowerSprite = getTower(node: node)
                 selTowerSprite.showOperationMenuView()
             }else if node.name == TD_Name_ScopeAttack{
                 node.isHidden = true
             }
         }
+    }
+    
+    func getTower(node:SKNode) -> TD_TowerSprite{
+        for tower in towersList {
+            if tower.towerSprite == node{
+                return tower
+            }
+        }
+        return TD_TowerSprite()
     }
     func setPhysicsBody(){
         physicsWorld.gravity = CGVector.init(dx: 0, dy: 0)//重力
@@ -242,9 +286,7 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
     func startCreatMonsterSprite(){
         
         
-        let monsterStr = monsterData.first
-        monsterData.removeFirst()
-        creatTeamMonsterSprte(monsterStr: monsterStr!)
+        
         
         timer = Timer.init(timeInterval: 1, repeats: true) { (kTimer) in
             self.countdown = self.countdown - 1
@@ -275,7 +317,7 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
         str.removeFirst()
         
         if str.count >= 1 {
-            let time: TimeInterval = 1
+            let time: TimeInterval = 1.5
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) {
                 self.creatTeamMonsterSprte(monsterStr: str)
             }
@@ -286,6 +328,16 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
         let monsterSprite = TD_MonsterSprite(imageNamed: String(format: "monster_%d", type));
         monsterSprite.size = CGSize(width: TD_Block_Width, height: TD_Block_Width)
         monsterSprite.position = startPoint
+        if type == 1{
+            monsterSprite.color = UIColor.purple      //着色红色代表怪物城堡
+            monsterSprite.colorBlendFactor = 0.5      //混合因子
+        }else if type == 2{
+            monsterSprite.color = UIColor.green       //着色红色代表怪物城堡
+            monsterSprite.colorBlendFactor = 0.5      //混合因子
+        }else if type == 3{
+            monsterSprite.color = UIColor.red         //着色红色代表怪物城堡
+            monsterSprite.colorBlendFactor = 0.5      //混合因子
+        }
         monsterSprite.isAggressive = false
         monsterSprite.targetPosition = endPoint
         monsterSprite.superScene = self
@@ -302,12 +354,21 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
             addChild(towersMenuView)
             towersMenuView.isHidden = true
             
-//            let towersData = [["name":"能量塔","img":"towers_1"],["name":"能量塔","img":"towers_1"],["name":"能量塔","img":"towers_1"],["name":"能量塔","img":"towers_1"],["name":"能量塔","img":"towers_1"],["name":"能量塔","img":"towers_1"]]
-            for i in 0..<towersData.count{
-                let data = towersData[String(format: "Towers_%d", scenarioIndex + 1)] as! NSDictionary
-                let towerMenu = SKSpriteNode(imageNamed: String(format: "%@_1", data["Image"] as! String))
+            for i in 0..<towersData.count+1{
+                var img = ""
+                var name = ""
+                if i<towersData.count{
+                    let data = towersData[String(format: "Towers_%d_1", i + 1)] as! NSDictionary
+                    img = data["Image"] as! String
+                    name = String(format: "CreatMenu_%@", data["Image"] as! String)
+                }else{
+                    img = "cancel"
+                    name = "CreatMenu_Cencel"
+                }
+                
+                let towerMenu = SKSpriteNode(imageNamed: img)
                 towerMenu.size = CGSize(width: 60, height: 60)
-                towerMenu.name = String(format: "CreatMenu_%@_1", data["Image"] as! String)
+                towerMenu.name = name
                 towerMenu.position = CGPoint(x: CGFloat(60 * i) + towerMenu.size.width / 2.0 - towersMenuView.size.width / 2.0, y: towerMenu.size.height / 2.0 - towersMenuView.size.height / 2.0)
                 towersMenuView.addChild(towerMenu)
             }
@@ -334,6 +395,11 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
             towerSprite.attackRange.remove(at: index!)
         }
     }
+    
+    /// 获取对应的防御塔
+    ///
+    /// - Parameter body: 检测到的body
+    /// - Returns: 对应的防御塔
     func getTowerSprite(body:SKPhysicsBody) -> TD_TowerSprite {
         for towerSprite in towersList {
             if (towerSprite.scopeAttack.physicsBody == body){
@@ -342,6 +408,11 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
         }
         return TD_TowerSprite()
     }
+    
+    /// 获取对应的怪物
+    ///
+    /// - Parameter body: 检测到的body
+    /// - Returns: 对应的怪物
     func getMonsterSprite(body:SKPhysicsBody) -> TD_MonsterSprite {
         for mosterSprite in monsterSpriteList {
             if (mosterSprite.physicsBody == body){
@@ -350,7 +421,18 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
         }
         return TD_MonsterSprite()
     }
+    
+    /// 摧毁怪物
+    ///
+    /// - Parameter monster: 被击杀的怪物
     func destroyed(monster:TD_MonsterSprite){
+        monster.removeAllFromParent()
+        
+        
+        let i = monsterSpriteList.index(of: monster)
+        if i != nil{
+            monsterSpriteList.remove(at: i!)
+        }
         
         for i in 0..<towersList.count {
             let tower = towersList[i]
@@ -364,13 +446,65 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
                 tower.attackTarget.remove(at: index1!)
             }
         }
+        if monsterSpriteList.count == 0{
+            if customsClearance(){
+                print("游戏胜利✌️")
+                
+                (viewController as! GameViewController).showMsgbox(_message: "开始下一关", _title: "恭喜通关", okTitle: "确定", cancelTitle: "取消", tag: 1)
+                
+            }else{
+                print("波次胜利")
+            }
+        }
+    }
+    
+    /// 摧毁防御塔
+    ///
+    /// - Parameter tower: 被摧毁的防御塔
+    func destroyed(tower:TD_TowerSprite){
+        tower.removeAllFromParent()
+        
+        let index = towersList.index(of: tower)
+        if index != nil{
+            towersList.append(selTowerSprite)
+        }
         
     }
-    func breakthrough(harm:Double){
+    
+    /// 获得能量
+    ///
+    /// - Parameter energy: 能量数值
+    func collectEnergy(energy:Double){
+        self.energy = self.energy + energy
+        energyLab.text = String(self.energy)
+    }
+    
+    
+    ///  被突破
+    ///
+    /// - Parameter monster: 突破的怪物
+    func breakthrough(monster:TD_MonsterSprite){
+        let harm = monster.harm
         HP = HP - harm
         hpLab.text = String(HP)
         if HP <= 0{
+            self.timer.invalidate()            //停止定时器
             (viewController as! GameViewController).showMsgbox(_message: "Game Over")
         }
+        destroyed(monster: monster)
+    }
+    func customsClearance() -> Bool {
+        if self.monsterData.count == 0 {
+            if monsterSpriteList.count == 0{
+                
+                return true
+            }
+        }
+        return false
+    }
+    
+    func refreshScene(scenarioIndex:Int){
+        self.scenarioIndex = scenarioIndex
+        refresh()
     }
 }

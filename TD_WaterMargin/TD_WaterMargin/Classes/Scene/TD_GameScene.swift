@@ -10,7 +10,6 @@ import SpriteKit
 
 class TD_GameScene: TD_BaseScene ,SKSceneDelegate{
 
-    var scenarioIndex = 1                                       //关卡
     
     var allSceneRecordData = [String:NSDictionary]()            //关卡通关记录数据
     

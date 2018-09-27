@@ -10,9 +10,13 @@ import UIKit
 import SpriteKit
 
 class TD_TowerSprite: TD_BaseSpriteNode {
+    var totalValue:Double = 0.0
+    
+    
     var soldierName:String = "步兵"                       //士兵名称
     var image = "soldier"                                //士兵图片名称
     var expenditure:Double = 2.0                         //召唤消耗
+    var upExpenditure:Double = 2.0                       //升级消耗
     var maxHP:Double = 0.0                               //最大生命值
     var moveSpeed:Double = 50.0                          //移动速度
     var attackSpeed:Double = 1.0                         //攻击速度 x秒/次
@@ -26,6 +30,8 @@ class TD_TowerSprite: TD_BaseSpriteNode {
 
     var moveGif = "towerMove"                            //移动动画gif
     var harm:Double = 1.0                                //造成伤害值
+    var maxLevel:Int = 1                                 //可升至最高级别
+
     var isFirst:Bool = true                              //是否是第一次出现
     var intro = "基础近战兵种"                             //兵种介绍
     var HP:Double = 0.0                                  //单位当前剩余生命
@@ -35,8 +41,8 @@ class TD_TowerSprite: TD_BaseSpriteNode {
     var operationMenuView = SKNode()                     //防御塔操作视图
     
     var towerType = 0                                    //防御塔类型
-    var level = 0                                        //防御塔级别
-
+    var level = 1                                        //防御塔级别
+    var towerSprite = SKSpriteNode()                     //防御塔实例
     
     var attackTarget = [TD_MonsterSprite]()              //防御塔正在攻击的目标
     
@@ -68,17 +74,18 @@ class TD_TowerSprite: TD_BaseSpriteNode {
     }
     func layout(towerType:Int){
         self.towerType = towerType
-        initTowerProperty(type: towerType)
+        refresh()
     }
     
     /// 初始化小兵属性
     func initTowerProperty(type:Int){
         let data = TD_AnalyticalDataObject().getFileData(fileName: "Towers") as! [NSString : NSDictionary]
-        let soldierInfo = data[NSString(format: "Towers_%d",type)]
+        let soldierInfo = data[NSString(format: "Towers_%d_%d",type,level)]
         
         soldierName = soldierInfo!["Name"] as! String
         image = soldierInfo!["Image"] as! String
         expenditure = Double(soldierInfo!["Expenditure"] as! String)!
+        upExpenditure = Double(soldierInfo!["UpExpenditure"] as! String)!
         maxHP = Double(soldierInfo!["HP"] as! String)!
         moveSpeed = Double(soldierInfo!["Speed"] as! String)!
         attackSpeed = Double(soldierInfo!["AttackSpeed"] as! String)!
@@ -92,6 +99,7 @@ class TD_TowerSprite: TD_BaseSpriteNode {
         intro = soldierInfo!["Intro"] as! String
         moveGif = soldierInfo!["MoveGif"] as! String
         harm = Double(soldierInfo!["Harm"] as! String)!
+        maxLevel = Int(soldierInfo!["MaxLevel"] as! String)!
         isFirst = soldierInfo!["IsFirst"] as! Bool
         intro = soldierInfo!["Intro"] as! String
 
@@ -99,6 +107,23 @@ class TD_TowerSprite: TD_BaseSpriteNode {
         HP = maxHP
     }
     
+    func refresh() {
+        initTowerProperty(type: towerType)
+        refreshTowerSprite()
+    }
+    
+    func refreshTowerSprite(){
+        
+        if towerSprite.name == TD_Name_TowerSprite{
+            towerSprite.removeFromParent()
+        }
+        
+        towerSprite = SKSpriteNode(imageNamed:image)
+        towerSprite.name = TD_Name_TowerSprite
+        towerSprite.position = position
+        towerSprite.size = size
+        superScene.addChild(towerSprite)
+    }
     
 
     func showConfirmBuild() {
@@ -198,6 +223,8 @@ class TD_TowerSprite: TD_BaseSpriteNode {
         removeFromParent()
         confirmBuild.removeFromParent()
         scopeAttack.removeFromParent()
+        towerSprite.removeFromParent()
+        operationMenuView.removeFromParent()
     }
     func updataAttack(){
         
@@ -238,7 +265,7 @@ class TD_TowerSprite: TD_BaseSpriteNode {
         attackSprite.position = CGPoint(x: position.x, y: position.y + size.height / 2.0)
         superScene.addChild(attackSprite)
         
-        let action = SKAction.move(to: monster.position, duration: 0.15)
+        let action = SKAction.move(to: monster.position, duration: 0.10)
 //        attackSprite.run(action)
         attackSprite.run(action) {
             attackSprite.removeFromParent()

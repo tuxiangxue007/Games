@@ -10,10 +10,15 @@ import UIKit
 
 class TD_AnalyticalDataObject: NSObject {
     
+    
+    
     var dFilePath =  NSHomeDirectory() + "/Library/Caches/"
 
     func getFileData(fileName:String) -> NSDictionary {
         var dict = NSDictionary()
+        let filePath = Bundle.main.path(forResource: fileName, ofType: "plist")
+        dict = NSDictionary(contentsOfFile: filePath!)!
+        return dict;
         
         let ud =  UserDefaults()
         let fileCache = ud.value(forKey: "fileCache")
@@ -41,5 +46,35 @@ class TD_AnalyticalDataObject: NSObject {
     func saveFileData(fileName:String,data:NSDictionary) {
         let path = dFilePath + fileName
         NSDictionary(dictionary: data).write(toFile: path, atomically: true)
+    }
+    
+    func editRecord(scenarioIndex:Int,starIndex:Int){
+        let fileName = "SceneRecord"
+        var dict = NSDictionary()
+//        let filePath = Bundle.main.path(forResource: fileName, ofType: "plist")
+//        dict = NSDictionary(contentsOfFile: filePath!)!
+//        return dict;
+        
+        let ud =  UserDefaults()
+        let fileCache = ud.value(forKey: "fileCache")
+        var fileData = NSMutableDictionary()
+        if fileCache != nil{
+            fileData = NSMutableDictionary(dictionary: fileCache as! NSDictionary )
+        }
+        
+        let path = dFilePath + fileName
+        if fileData.value(forKey: fileName) != nil{
+            dict = NSDictionary.init(contentsOfFile: path)!
+        }else{
+            let filePath = Bundle.main.path(forResource: fileName, ofType: "plist")
+            dict = NSDictionary(contentsOfFile: filePath!)!
+            NSDictionary(dictionary: dict).write(toFile: path, atomically: true)
+            fileData.setValue("1", forKey: fileName)
+            ud.set(fileData, forKey: "fileCache")
+        }
+        
+        
+        
+        
     }
 }

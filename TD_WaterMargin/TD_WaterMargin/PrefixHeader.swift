@@ -61,7 +61,8 @@ let TD_AttackCategory           : UInt32 = 0x1 << 6                     //怪物
 
 
 let TD_Name_Clearing = "clearing"                       //空地
-let TD_Name_Tower = "tower"                             //防御塔
+let TD_Name_Tower = "tower"                             //防御塔整体
+let TD_Name_TowerSprite = "towerSprite"                 //防御塔实例
 let TD_Name_ScopeAttack = "scopeAttack"                 //防御塔攻击范围
 let TD_Name_CountdownLab = "countdownLab"               //出怪倒计时Lab
 let TD_Name_HPLab = "HPLab"                             //关卡血量显示Lab

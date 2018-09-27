@@ -28,6 +28,7 @@
 		040003A8214A402D00CFF501 /* SceneRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040003A7214A402D00CFF501 /* SceneRecord.plist */; };
 		040003AC214A52DF00CFF501 /* TD_BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040003AB214A52DF00CFF501 /* TD_BaseScene.swift */; };
 		0408244F215097A6005CAE6C /* monsterMove_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0408244E215097A6005CAE6C /* monsterMove_1.gif */; };
+		040824682152560B005CAE6C /* TowerList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040824672152560B005CAE6C /* TowerList.plist */; };
 		040A8BA8214A5D8900440EF0 /* TD_BaseSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BA7214A5D8900440EF0 /* TD_BaseSpriteNode.swift */; };
 		040A8BB7214A6AB800440EF0 /* TD_SelectScenarioSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BB6214A6AB800440EF0 /* TD_SelectScenarioSprite.swift */; };
 		040A8BB9214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BB8214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift */; };
@@ -82,6 +83,7 @@
 		040003A7214A402D00CFF501 /* SceneRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SceneRecord.plist; sourceTree = "<group>"; };
 		040003AB214A52DF00CFF501 /* TD_BaseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_BaseScene.swift; sourceTree = "<group>"; };
 		0408244E215097A6005CAE6C /* monsterMove_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = monsterMove_1.gif; sourceTree = "<group>"; };
+		040824672152560B005CAE6C /* TowerList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TowerList.plist; sourceTree = "<group>"; };
 		040A8BA7214A5D8900440EF0 /* TD_BaseSpriteNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_BaseSpriteNode.swift; sourceTree = "<group>"; };
 		040A8BB6214A6AB800440EF0 /* TD_SelectScenarioSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_SelectScenarioSprite.swift; sourceTree = "<group>"; };
 		040A8BB8214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_DefensiveTowersSprite.swift; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				040A8BC3214F8DF000440EF0 /* Towers.plist */,
+				040824672152560B005CAE6C /* TowerList.plist */,
 			);
 			path = Towers;
 			sourceTree = "<group>";
@@ -406,6 +409,7 @@
 			files = (
 				0408244F215097A6005CAE6C /* monsterMove_1.gif in Resources */,
 				040003A8214A402D00CFF501 /* SceneRecord.plist in Resources */,
+				040824682152560B005CAE6C /* TowerList.plist in Resources */,
 				0400035E214A385500CFF501 /* Main.storyboard in Resources */,
 				0400039B214A390800CFF501 /* Soldier.plist in Resources */,
 				040A8BC4214F8DF000440EF0 /* Towers.plist in Resources */,

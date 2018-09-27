@@ -5,13 +5,15 @@
 	<key>Monster_1</key>
 	<dict>
 		<key>Name</key>
-		<string>幼狼</string>
+		<string>狼</string>
 		<key>Image</key>
 		<string>monster_1</string>
 		<key>Expenditure</key>
 		<string>2</string>
+		<key>Energy</key>
+		<string>5</string>
 		<key>HP</key>
-		<string>3</string>
+		<string>5</string>
 		<key>Speed</key>
 		<string>20</string>
 		<key>AttackSpeed</key>
@@ -38,15 +40,17 @@
 	<key>Monster_2</key>
 	<dict>
 		<key>Name</key>
-		<string>野狼</string>
+		<string>狼</string>
 		<key>Image</key>
 		<string>monster_1</string>
 		<key>Expenditure</key>
 		<string>2</string>
+		<key>Energy</key>
+		<string>5</string>
 		<key>HP</key>
-		<string>10</string>
+		<string>15</string>
 		<key>Speed</key>
-		<string>40</string>
+		<string>20</string>
 		<key>AttackSpeed</key>
 		<string>1</string>
 		<key>ScopeAlert</key>
@@ -71,13 +75,15 @@
 	<key>Monster_3</key>
 	<dict>
 		<key>Name</key>
-		<string>野狼</string>
+		<string>狼</string>
 		<key>Image</key>
 		<string>monster_1</string>
 		<key>Expenditure</key>
 		<string>2</string>
+		<key>Energy</key>
+		<string>5</string>
 		<key>HP</key>
-		<string>10</string>
+		<string>20</string>
 		<key>Speed</key>
 		<string>40</string>
 		<key>AttackSpeed</key>
@@ -104,15 +110,17 @@
 	<key>Monster_4</key>
 	<dict>
 		<key>Name</key>
-		<string>野狼</string>
+		<string>狼</string>
 		<key>Image</key>
 		<string>monster_1</string>
 		<key>Expenditure</key>
 		<string>2</string>
+		<key>Energy</key>
+		<string>5</string>
 		<key>HP</key>
-		<string>10</string>
+		<string>20</string>
 		<key>Speed</key>
-		<string>40</string>
+		<string>50</string>
 		<key>AttackSpeed</key>
 		<string>1</string>
 		<key>ScopeAlert</key>

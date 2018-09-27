@@ -83,11 +83,11 @@ class TD_PathPlanning: NSObject {
     func getPathPlanning() -> NSArray {
 
         
-        let startI = Int((startRect.origin.x - mapStartPoint.x) / width)
-        let startJ = mapData.count - Int((startRect.origin.y - mapStartPoint.y) / width)
+        let startI = Int((startRect.origin.x - mapStartPoint.x) / width + 0.5)
+        let startJ = Int((startRect.origin.y - mapStartPoint.y) / width + 0.5)
         
-        let endI = Int((endRect.origin.x - mapStartPoint.x) / width)
-        let endJ = mapData.count - Int((endRect.origin.y - mapStartPoint.y) / width)
+        let endI = Int((endRect.origin.x - mapStartPoint.x) / width + 0.5)
+        let endJ = Int((endRect.origin.y - mapStartPoint.y) / width + 0.5)
         
         formattingStartRect = CGRect(x: width * CGFloat(startI) , y: CGFloat(startJ) * width , width: width, height: width)
         formattingEndRect = CGRect(x: width * CGFloat(endI) , y: CGFloat(endJ) * width , width: width, height: width)
@@ -116,7 +116,7 @@ class TD_PathPlanning: NSObject {
             min_x = item.key / 100
             min_y = item.key % 100
         }
-        
+
         
         for i in 0..<4 {
             var index_i = min_x
@@ -124,15 +124,16 @@ class TD_PathPlanning: NSObject {
             var isEffective = true
             switch i {
             case 0://上
-                index_j = index_j - 1
-                if index_j < 0 {
+                
+                index_j = index_j + 1
+                
+                if mapData.count <= index_j {
                     isEffective = false
                 }
                 break
             case 1://下
-                index_j = index_j + 1
-                
-                if mapData.count <= index_j {
+                index_j = index_j - 1
+                if index_j < 0 {
                     isEffective = false
                 }
                 break
