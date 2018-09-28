@@ -39,7 +39,9 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
     
     var countdown = 10                                  //出怪倒计时
     var countdownLab = SKLabelNode()                    //出怪倒计时显示控件
-    var HP = 0.0                                        //关卡中血量
+    var HP = 0.0                                        //关卡当前血量
+    var maxHP = 0.0                                     //关卡最大血量
+
     var hpLab = SKLabelNode()                           //关卡血量显示控件
     var energy = 100.0                                  //剩余能量
     var energyLab = SKLabelNode()                       //剩余能量显示控件
@@ -71,6 +73,7 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
         let data = allSceneData[String(format: "Scene_%d", scenarioIndex)] as! NSDictionary
         
         HP = Double(data["HP"] as! String)!
+        maxHP = HP
         energy = Double(data["Energy"] as! String)!
 
         let sceneData = data["scene"] as! NSArray
@@ -219,7 +222,6 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
             selClearBlockSprite.isHidden = true
             if (node.name?.hasPrefix("CreatMenu_"))! {//判断是建造菜单按钮
                 if node.name == "CreatMenu_Cencel"{//建造菜单取消按钮
-                    towersMenuView.isHidden = true
                 }else{
                     let name = node.name! as NSString
                     let towerType = Int(String(name.substring(from: 17).first!))
@@ -228,7 +230,6 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
                     if energy >= expenditure!{
                         
                         
-                        towersMenuView.isHidden = true
                         
                         //                    let img = name.substring(from: 10)
                         let towerSprite = TD_TowerSprite(color: UIColor.clear, size: selClearBlockSprite.size)
@@ -350,6 +351,7 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
     func showCreatTowersMenu() {
         if (towersMenuView.name == nil){
             towersMenuView = SKSpriteNode(color: UIColor.cyan, size: CGSize(width: TD_ScreenW, height: 60))
+            towersMenuView.name = "towersMenuView"
             towersMenuView.position = CGPoint(x: towersMenuView.size.width / 2.0, y: towersMenuView.size.height / 2.0)
             addChild(towersMenuView)
             towersMenuView.isHidden = true
@@ -449,7 +451,16 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
         if monsterSpriteList.count == 0{
             if customsClearance(){
                 print("游戏胜利✌️")
-                
+//                editRecord
+                var start = 0
+                if HP == maxHP {
+                    start = 3
+                }else if maxHP - HP >= 2{
+                    start = 1
+                }else{
+                    start = 2
+                }
+                TD_AnalyticalDataObject().editRecord(scenarioIndex: scenarioIndex, starIndex: start)
                 (viewController as! GameViewController).showMsgbox(_message: "开始下一关", _title: "恭喜通关", okTitle: "确定", cancelTitle: "取消", tag: 1)
                 
             }else{

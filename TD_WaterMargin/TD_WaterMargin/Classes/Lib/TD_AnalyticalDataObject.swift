@@ -16,9 +16,10 @@ class TD_AnalyticalDataObject: NSObject {
 
     func getFileData(fileName:String) -> NSDictionary {
         var dict = NSDictionary()
-        let filePath = Bundle.main.path(forResource: fileName, ofType: "plist")
-        dict = NSDictionary(contentsOfFile: filePath!)!
-        return dict;
+        
+//        let filePath = Bundle.main.path(forResource: fileName, ofType: "plist")
+//        dict = NSDictionary(contentsOfFile: filePath!)!
+//        return dict;
         
         let ud =  UserDefaults()
         let fileCache = ud.value(forKey: "fileCache")
@@ -50,10 +51,7 @@ class TD_AnalyticalDataObject: NSObject {
     
     func editRecord(scenarioIndex:Int,starIndex:Int){
         let fileName = "SceneRecord"
-        var dict = NSDictionary()
-//        let filePath = Bundle.main.path(forResource: fileName, ofType: "plist")
-//        dict = NSDictionary(contentsOfFile: filePath!)!
-//        return dict;
+        var dict = NSMutableDictionary()
         
         let ud =  UserDefaults()
         let fileCache = ud.value(forKey: "fileCache")
@@ -64,17 +62,17 @@ class TD_AnalyticalDataObject: NSObject {
         
         let path = dFilePath + fileName
         if fileData.value(forKey: fileName) != nil{
-            dict = NSDictionary.init(contentsOfFile: path)!
-        }else{
-            let filePath = Bundle.main.path(forResource: fileName, ofType: "plist")
-            dict = NSDictionary(contentsOfFile: filePath!)!
+            dict = NSMutableDictionary.init(contentsOfFile: path)!
+            
+            dict.setValue(["isOpen":true,"star":String(starIndex)], forKey: String(format: "Scene_%d", scenarioIndex))
+            if scenarioIndex < TD_MAX_Scenario{
+                let d = dict[String(format: "Scene_%d", scenarioIndex + 1)] as! NSMutableDictionary
+                d["isOpen"] = true
+                dict.setValue(d, forKey: String(format: "Scene_%d", scenarioIndex + 1))
+            }
             NSDictionary(dictionary: dict).write(toFile: path, atomically: true)
-            fileData.setValue("1", forKey: fileName)
-            ud.set(fileData, forKey: "fileCache")
         }
-        
-        
-        
-        
+
+
     }
 }

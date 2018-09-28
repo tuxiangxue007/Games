@@ -18,6 +18,7 @@ let TD_Block_Width = (TD_ScreenW - 10 * 2) / 19.0
 let TD_Game_TopClearance = (TD_ScreenH - TD_Block_Width * 9) / 2.0
 //let TD_Block_Height = (TD_ScreenH - 10 * 2) / 9.0
 
+let TD_MAX_Scenario = 10
 
 
 let TD_SpriteName_ZS = "战士"

@@ -19,54 +19,34 @@ class TD_GameScene: TD_BaseScene ,SKSceneDelegate{
         
         
         
-        creatScene();
+        refreshView();
     }
 
     
 
-    func creatScene() {
+    func refreshView() {
+//        for item in children {
+//            item.removeFromParent()
+//        }
+        removeAllChildren()
+        
         for i in 0 ..< allSceneRecordData.count {
             let data = allSceneRecordData[String(format: "Scene_%d", i + 1)]
 
-            let sp = TD_SelectScenarioSprite(color: UIColor.lightGray, size: CGSize(width: 80, height: 80))
+            let sp = TD_SelectScenarioSprite(color: UIColor.clear, size: CGSize(width: 80, height: 80))
+            sp.zPosition = 100
+            sp.superScene = self
             sp.tag = 1000 + i
             sp.name = "selectScenario"
             sp.data = data as! [String : Any]
             sp.position = CGPoint(x: 26 + i % 6 * (80 + 27) + 40, y: 30 + (80 + 30) * Int(i / 6) + 40)
             addChild(sp)
+            sp.layout()
         }
         
 
     }
 
-    func gameOver(){
-        print("游戏结束")
-    }
-    
-    func didEnd(_ contact: SKPhysicsContact) {
-//        let bodyA = contact.bodyA
-//        let bodyB = contact.bodyB
-        
-       
-    }
-    func didBegin(_ contact: SKPhysicsContact) {
-        let bodyA = contact.bodyA
-        let bodyB = contact.bodyB
-        print("bodyA.categoryBitMask:",bodyA.categoryBitMask)
-        print("bodyB.categoryBitMask:",bodyB.categoryBitMask)
-        
-        
-        
-        
-        
-    }
-    
-    
-
-
-    func update(_ currentTime: TimeInterval,for scene: SKScene){
-        
-    }
     
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -81,14 +61,6 @@ class TD_GameScene: TD_BaseScene ,SKSceneDelegate{
         }else{
         }
 
-    }
-
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        let touch = ((touches as NSSet).anyObject() as AnyObject)     //进行类  型转化
-//        let point = touch.location(in:self)
-//        let node = self.atPoint(point)
-       
     }
     
 }

@@ -62,7 +62,12 @@ class GameViewController: UIViewController {
                 self.scenarioScene.refreshScene(scenarioIndex: self.scenarioIndex)
             }
         }
-        let btnCancel = UIAlertAction(title: cancelTitle, style: .default, handler: nil)
+        let btnCancel = UIAlertAction(title: cancelTitle, style: .default){ (action) in
+            if tag == 1{
+                self.showSelScenarioScene()
+                self.selScenarioScene.refreshView()
+            }
+        }
         alert.addAction(btnOK)
         alert.addAction(btnCancel)
         self.present(alert, animated: true, completion: nil)

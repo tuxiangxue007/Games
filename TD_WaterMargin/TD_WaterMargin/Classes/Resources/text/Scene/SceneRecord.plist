@@ -7,12 +7,68 @@
 		<key>isOpen</key>
 		<true/>
 		<key>star</key>
-		<string>0</string>
+		<string>3</string>
 	</dict>
 	<key>Scene_2</key>
 	<dict>
 		<key>isOpen</key>
-		<true/>
+		<false/>
+		<key>star</key>
+		<string>2</string>
+	</dict>
+	<key>Scene_3</key>
+	<dict>
+		<key>isOpen</key>
+		<false/>
+		<key>star</key>
+		<string>1</string>
+	</dict>
+	<key>Scene_4</key>
+	<dict>
+		<key>isOpen</key>
+		<false/>
+		<key>star</key>
+		<string>0</string>
+	</dict>
+	<key>Scene_5</key>
+	<dict>
+		<key>isOpen</key>
+		<false/>
+		<key>star</key>
+		<string>0</string>
+	</dict>
+	<key>Scene_6</key>
+	<dict>
+		<key>isOpen</key>
+		<false/>
+		<key>star</key>
+		<string>0</string>
+	</dict>
+	<key>Scene_7</key>
+	<dict>
+		<key>isOpen</key>
+		<false/>
+		<key>star</key>
+		<string>0</string>
+	</dict>
+	<key>Scene_8</key>
+	<dict>
+		<key>isOpen</key>
+		<false/>
+		<key>star</key>
+		<string>0</string>
+	</dict>
+	<key>Scene_9</key>
+	<dict>
+		<key>isOpen</key>
+		<false/>
+		<key>star</key>
+		<string>0</string>
+	</dict>
+	<key>Scene_10</key>
+	<dict>
+		<key>isOpen</key>
+		<false/>
 		<key>star</key>
 		<string>0</string>
 	</dict>

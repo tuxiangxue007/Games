@@ -15,8 +15,6 @@
 		04000363214A385800CFF501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04000361214A385800CFF501 /* LaunchScreen.storyboard */; };
 		0400036E214A385800CFF501 /* TD_WaterMarginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400036D214A385800CFF501 /* TD_WaterMarginTests.swift */; };
 		04000379214A385800CFF501 /* TD_WaterMarginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04000378214A385800CFF501 /* TD_WaterMarginUITests.swift */; };
-		04000399214A390800CFF501 /* attack.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0400038A214A390800CFF501 /* attack.gif */; };
-		0400039A214A390800CFF501 /* towerMove.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0400038B214A390800CFF501 /* towerMove.gif */; };
 		0400039B214A390800CFF501 /* Soldier.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0400038E214A390800CFF501 /* Soldier.plist */; };
 		0400039C214A390800CFF501 /* Scene.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04000391214A390800CFF501 /* Scene.plist */; };
 		0400039D214A390800CFF501 /* Monster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04000393214A390800CFF501 /* Monster.plist */; };
@@ -70,8 +68,6 @@
 		04000374214A385800CFF501 /* TD_WaterMarginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TD_WaterMarginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04000378214A385800CFF501 /* TD_WaterMarginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_WaterMarginUITests.swift; sourceTree = "<group>"; };
 		0400037A214A385800CFF501 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0400038A214A390800CFF501 /* attack.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = attack.gif; sourceTree = "<group>"; };
-		0400038B214A390800CFF501 /* towerMove.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = towerMove.gif; sourceTree = "<group>"; };
 		0400038E214A390800CFF501 /* Soldier.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Soldier.plist; sourceTree = "<group>"; };
 		04000391214A390800CFF501 /* Scene.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Scene.plist; sourceTree = "<group>"; };
 		04000393214A390800CFF501 /* Monster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Monster.plist; sourceTree = "<group>"; };
@@ -205,8 +201,6 @@
 			isa = PBXGroup;
 			children = (
 				0408244E215097A6005CAE6C /* monsterMove_1.gif */,
-				0400038A214A390800CFF501 /* attack.gif */,
-				0400038B214A390800CFF501 /* towerMove.gif */,
 			);
 			path = Gif;
 			sourceTree = "<group>";
@@ -417,9 +411,7 @@
 				04000363214A385800CFF501 /* LaunchScreen.storyboard in Resources */,
 				0400039D214A390800CFF501 /* Monster.plist in Resources */,
 				0400039C214A390800CFF501 /* Scene.plist in Resources */,
-				04000399214A390800CFF501 /* attack.gif in Resources */,
 				04000357214A385500CFF501 /* Actions.sks in Resources */,
-				0400039A214A390800CFF501 /* towerMove.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
