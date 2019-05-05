@@ -34,7 +34,7 @@ let TD_SpriteType_KZS = 4
 let TD_SpriteType_TL = 5
 
 
-
+let TD_Block_AspectRatio_Show = 1.6
 let TD_Attack_ZS = ["roundness","attack"]
 
 
