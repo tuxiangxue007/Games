@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Scene_1</key>
+	<dict>
+		<key>cardGroup</key>
+		<array>
+			<string>2001</string>
+			<string>2001</string>
+			<string>2001</string>
+		</array>
+		<key>scene</key>
+		<array>
+			<dict>
+				<key>202</key>
+				<string>2001</string>
+			</dict>
+			<dict>
+				<key>210</key>
+				<string>2001</string>
+			</dict>
+		</array>
+	</dict>
+</dict>
+</plist>

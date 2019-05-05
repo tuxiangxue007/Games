@@ -21,7 +21,6 @@
 		0400039E214A390800CFF501 /* TD_GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04000398214A390800CFF501 /* TD_GameScene.swift */; };
 		040003A1214A396300CFF501 /* TD_AnalyticalDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0400039F214A396300CFF501 /* TD_AnalyticalDataObject.swift */; };
 		040003A2214A396300CFF501 /* TD_PlayMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040003A0214A396300CFF501 /* TD_PlayMusic.swift */; };
-		040003A4214A3A1300CFF501 /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040003A3214A3A1200CFF501 /* PrefixHeader.swift */; };
 		040003A6214A3F7E00CFF501 /* TD_ScenarioScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040003A5214A3F7E00CFF501 /* TD_ScenarioScene.swift */; };
 		040003A8214A402D00CFF501 /* SceneRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040003A7214A402D00CFF501 /* SceneRecord.plist */; };
 		040003AC214A52DF00CFF501 /* TD_BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040003AB214A52DF00CFF501 /* TD_BaseScene.swift */; };
@@ -34,6 +33,9 @@
 		040A8BBD214A6BEB00440EF0 /* TD_PathPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BBC214A6BEB00440EF0 /* TD_PathPlanning.swift */; };
 		040A8BC2214F873700440EF0 /* TD_TowerSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040A8BC1214F873700440EF0 /* TD_TowerSprite.swift */; };
 		040A8BC4214F8DF000440EF0 /* Towers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 040A8BC3214F8DF000440EF0 /* Towers.plist */; };
+		04549E8E215DD08500046086 /* TD_EnergyBallSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04549E8D215DD08500046086 /* TD_EnergyBallSprite.swift */; };
+		04549E90215DD24700046086 /* TD_Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04549E8F215DD24700046086 /* TD_Action.swift */; };
+		04CAE9892181BA3A00C58B8A /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CAE9882181BA3A00C58B8A /* PrefixHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +76,6 @@
 		04000398214A390800CFF501 /* TD_GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_GameScene.swift; sourceTree = "<group>"; };
 		0400039F214A396300CFF501 /* TD_AnalyticalDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_AnalyticalDataObject.swift; sourceTree = "<group>"; };
 		040003A0214A396300CFF501 /* TD_PlayMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_PlayMusic.swift; sourceTree = "<group>"; };
-		040003A3214A3A1200CFF501 /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 		040003A5214A3F7E00CFF501 /* TD_ScenarioScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_ScenarioScene.swift; sourceTree = "<group>"; };
 		040003A7214A402D00CFF501 /* SceneRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SceneRecord.plist; sourceTree = "<group>"; };
 		040003AB214A52DF00CFF501 /* TD_BaseScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_BaseScene.swift; sourceTree = "<group>"; };
@@ -87,6 +88,9 @@
 		040A8BBC214A6BEB00440EF0 /* TD_PathPlanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_PathPlanning.swift; sourceTree = "<group>"; };
 		040A8BC1214F873700440EF0 /* TD_TowerSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_TowerSprite.swift; sourceTree = "<group>"; };
 		040A8BC3214F8DF000440EF0 /* Towers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Towers.plist; sourceTree = "<group>"; };
+		04549E8D215DD08500046086 /* TD_EnergyBallSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_EnergyBallSprite.swift; sourceTree = "<group>"; };
+		04549E8F215DD24700046086 /* TD_Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_Action.swift; sourceTree = "<group>"; };
+		04CAE9882181BA3A00C58B8A /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +145,7 @@
 				04000352214A385500CFF501 /* AppDelegate.swift */,
 				04000356214A385500CFF501 /* Actions.sks */,
 				0400035A214A385500CFF501 /* GameViewController.swift */,
-				040003A3214A3A1200CFF501 /* PrefixHeader.swift */,
+				04CAE9882181BA3A00C58B8A /* PrefixHeader.swift */,
 				0400035C214A385500CFF501 /* Main.storyboard */,
 				0400035F214A385800CFF501 /* Assets.xcassets */,
 				04000361214A385800CFF501 /* LaunchScreen.storyboard */,
@@ -264,6 +268,7 @@
 				040A8BB8214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift */,
 				040A8BBA214A6AFE00440EF0 /* TD_MonsterSprite.swift */,
 				040A8BC1214F873700440EF0 /* TD_TowerSprite.swift */,
+				04549E8D215DD08500046086 /* TD_EnergyBallSprite.swift */,
 			);
 			path = Sprite;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				0400039F214A396300CFF501 /* TD_AnalyticalDataObject.swift */,
 				040003A0214A396300CFF501 /* TD_PlayMusic.swift */,
 				040A8BBC214A6BEB00440EF0 /* TD_PathPlanning.swift */,
+				04549E8F215DD24700046086 /* TD_Action.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -439,17 +445,19 @@
 				040A8BB9214A6AE500440EF0 /* TD_DefensiveTowersSprite.swift in Sources */,
 				040A8BB7214A6AB800440EF0 /* TD_SelectScenarioSprite.swift in Sources */,
 				0400039E214A390800CFF501 /* TD_GameScene.swift in Sources */,
-				040003A4214A3A1300CFF501 /* PrefixHeader.swift in Sources */,
 				040A8BBD214A6BEB00440EF0 /* TD_PathPlanning.swift in Sources */,
+				04CAE9892181BA3A00C58B8A /* PrefixHeader.swift in Sources */,
 				040A8BA8214A5D8900440EF0 /* TD_BaseSpriteNode.swift in Sources */,
 				040003A1214A396300CFF501 /* TD_AnalyticalDataObject.swift in Sources */,
 				040003A6214A3F7E00CFF501 /* TD_ScenarioScene.swift in Sources */,
+				04549E8E215DD08500046086 /* TD_EnergyBallSprite.swift in Sources */,
 				040A8BBB214A6AFE00440EF0 /* TD_MonsterSprite.swift in Sources */,
 				040003A2214A396300CFF501 /* TD_PlayMusic.swift in Sources */,
 				040003AC214A52DF00CFF501 /* TD_BaseScene.swift in Sources */,
 				0400035B214A385500CFF501 /* GameViewController.swift in Sources */,
 				040A8BC2214F873700440EF0 /* TD_TowerSprite.swift in Sources */,
 				04000353214A385500CFF501 /* AppDelegate.swift in Sources */,
+				04549E90215DD24700046086 /* TD_Action.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

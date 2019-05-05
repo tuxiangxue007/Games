@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Intro</key>
+	<string>PS:Type 0～9：属性类技能、10～19：动作类技能、20～29：光环类、100:限制类、101:召唤类、102
+1：属性类技能 
+2：回合开始前触发（属性类：自毁、愈合等） 
+3：回合结束后触发（属性类：自毁、愈合等）
+4：攻击后触发（属性类：英勇、嗜血等）
+5：被攻击后触发（属性类：狂暴等）
+
+10:被攻击后触发（属性类：反击、反弹等）
+11:行动后后触发（属性类：加速、减速等）
+
+100:限制类 禁飞等
+</string>
+	<key>0</key>
+	<dict>
+		<key>Name</key>
+		<string>TD_Internationalization_Skills0Name</string>
+		<key>Type</key>
+		<string>0</string>
+		<key>AttributeName</key>
+		<string>Armor</string>
+		<key>AttributeNumber</key>
+		<string>1</string>
+		<key>Intro</key>
+		<string>TD_Internationalization_Skills0Intro</string>
+	</dict>
+	<key>1</key>
+	<dict>
+		<key>Name</key>
+		<string>TD_Internationalization_Skills1Name</string>
+		<key>Type</key>
+		<string>0</string>
+		<key>AttributeName</key>
+		<string>Armor</string>
+		<key>AttributeNumber</key>
+		<string>2</string>
+		<key>Intro</key>
+		<string>TD_Internationalization_Skills1Intro</string>
+	</dict>
+	<key>2</key>
+	<dict>
+		<key>Name</key>
+		<string>TD_Internationalization_Skills2Name</string>
+		<key>Type</key>
+		<string>0</string>
+		<key>AttributeName</key>
+		<string>Armor</string>
+		<key>AttributeNumber</key>
+		<string>3</string>
+		<key>Intro</key>
+		<string>TD_Internationalization_Skills2Intro</string>
+	</dict>
+	<key>3</key>
+	<dict>
+		<key>Name</key>
+		<string>TD_Internationalization_Skills3Name</string>
+		<key>Type</key>
+		<string>0</string>
+		<key>AttributeName</key>
+		<string>IsScope</string>
+		<key>AttributeNumber</key>
+		<string>1</string>
+		<key>Intro</key>
+		<string>TD_Internationalization_Skills3Intro</string>
+	</dict>
+</dict>
+</plist>

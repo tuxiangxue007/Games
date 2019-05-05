@@ -30,7 +30,7 @@ class GameViewController: UIViewController {
     }
     
     func showScenarioScene(index:Int){
-        
+
         if let view = self.view as! SKView? {
             scenarioIndex = index
             scenarioScene.scenarioIndex = index

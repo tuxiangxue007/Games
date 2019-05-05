@@ -1,0 +1,8 @@
+TD_Internationalization_Skills0Name = "Heavy armor 1";
+TD_Internationalization_Skills0Intro = "Reduces physical damage received by 1 point";
+
+TD_Internationalization_Skills1Name = "Heavy armor 2";
+TD_Internationalization_Skills1Intro = "Reduces physical damage received by 2 point";
+
+TD_Internationalization_Skills2Name = "Heavy armor 3";
+TD_Internationalization_Skills2Intro = "Reduces physical damage received by 3 point";

@@ -1,0 +1,12 @@
+TD_Internationalization_Skills0Name = "重甲1";
+TD_Internationalization_Skills0Intro = "减免1点收到的物理伤害";
+
+TD_Internationalization_Skills1Name = "重甲2";
+TD_Internationalization_Skills1Intro = "减免2点收到的物理伤害";
+
+TD_Internationalization_Skills2Name = "重甲3";
+TD_Internationalization_Skills2Intro = "减免3点收到的物理伤害";
+
+TD_Internationalization_Skills3Name = "警戒1";
+TD_Internationalization_Skills3Intro = "攻击范围为周围一格";
+
