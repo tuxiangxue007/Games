@@ -4,7 +4,7 @@
 //
 //  Created by mac on 2018/7/9.
 //  Copyright © 2018年 DAA. All rights reserved.
-//
+//  选择关卡界面
 
 import SpriteKit
 
@@ -23,9 +23,7 @@ class TD_GameScene: TD_BaseScene ,SKSceneDelegate{
     
 
     func refreshView() {
-//        for item in children {
-//            item.removeFromParent()
-//        }
+
         removeAllChildren()
         
         for i in 0 ..< allSceneRecordData.count {
@@ -41,12 +39,7 @@ class TD_GameScene: TD_BaseScene ,SKSceneDelegate{
             addChild(sp)
             sp.layout()
         }
-        
-
     }
-
-    
-
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touch = ((touches as NSSet).anyObject() as AnyObject)     //进行类  型转化
         let point = touch.location(in:self)
@@ -57,8 +50,7 @@ class TD_GameScene: TD_BaseScene ,SKSceneDelegate{
                 (viewController as! GameViewController).showScenarioScene(index: (node as! TD_SelectScenarioSprite).tag - 1000 + 1)
             }
         }else{
+            
         }
-
     }
-    
 }

@@ -1,0 +1,769 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0403A5DA227ED23C0029C9C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5D9227ED23C0029C9C5 /* AppDelegate.swift */; };
+		0403A5DC227ED23C0029C9C5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0403A5DB227ED23C0029C9C5 /* GameScene.sks */; };
+		0403A5DE227ED23C0029C9C5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 0403A5DD227ED23C0029C9C5 /* Actions.sks */; };
+		0403A5E0227ED23C0029C9C5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5DF227ED23C0029C9C5 /* GameScene.swift */; };
+		0403A5E2227ED23C0029C9C5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5E1227ED23C0029C9C5 /* GameViewController.swift */; };
+		0403A5E5227ED23C0029C9C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0403A5E3227ED23C0029C9C5 /* Main.storyboard */; };
+		0403A5E7227ED23D0029C9C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0403A5E6227ED23D0029C9C5 /* Assets.xcassets */; };
+		0403A5EA227ED23D0029C9C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0403A5E8227ED23D0029C9C5 /* LaunchScreen.storyboard */; };
+		0403A5F5227ED23D0029C9C5 /* TD_PingPongBallsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5F4227ED23D0029C9C5 /* TD_PingPongBallsTests.swift */; };
+		0403A600227ED23D0029C9C5 /* TD_PingPongBallsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5FF227ED23D0029C9C5 /* TD_PingPongBallsUITests.swift */; };
+		0403A60E227ED42B0029C9C5 /* PrefixHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A60D227ED42A0029C9C5 /* PrefixHeader.swift */; };
+		0403A631227ED47F0029C9C5 /* monsterMove_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0403A613227ED47F0029C9C5 /* monsterMove_1.gif */; };
+		0403A632227ED47F0029C9C5 /* Soldier.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0403A616227ED47F0029C9C5 /* Soldier.plist */; };
+		0403A633227ED47F0029C9C5 /* Towers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0403A618227ED47F0029C9C5 /* Towers.plist */; };
+		0403A634227ED47F0029C9C5 /* TowerList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0403A619227ED47F0029C9C5 /* TowerList.plist */; };
+		0403A635227ED47F0029C9C5 /* SceneRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0403A61C227ED47F0029C9C5 /* SceneRecord.plist */; };
+		0403A636227ED47F0029C9C5 /* Scene.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0403A61D227ED47F0029C9C5 /* Scene.plist */; };
+		0403A637227ED47F0029C9C5 /* Monster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0403A61F227ED47F0029C9C5 /* Monster.plist */; };
+		0403A63B227ED47F0029C9C5 /* TD_BaseSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A625227ED47F0029C9C5 /* TD_BaseSpriteNode.swift */; };
+		0403A63D227ED47F0029C9C5 /* TD_BallsSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A627227ED47F0029C9C5 /* TD_BallsSprite.swift */; };
+		0403A63E227ED47F0029C9C5 /* TD_PathPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A629227ED47F0029C9C5 /* TD_PathPlanning.swift */; };
+		0403A63F227ED47F0029C9C5 /* TD_AnalyticalDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A62A227ED47F0029C9C5 /* TD_AnalyticalDataObject.swift */; };
+		0403A641227ED47F0029C9C5 /* TD_Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A62C227ED47F0029C9C5 /* TD_Action.swift */; };
+		0403A642227ED47F0029C9C5 /* TD_BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A62E227ED47F0029C9C5 /* TD_BaseScene.swift */; };
+		0403A643227ED47F0029C9C5 /* TD_GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A62F227ED47F0029C9C5 /* TD_GameScene.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0403A5F1227ED23D0029C9C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0403A5CE227ED23C0029C9C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0403A5D5227ED23C0029C9C5;
+			remoteInfo = TD_PingPongBalls;
+		};
+		0403A5FC227ED23D0029C9C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0403A5CE227ED23C0029C9C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0403A5D5227ED23C0029C9C5;
+			remoteInfo = TD_PingPongBalls;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0403A5D6227ED23C0029C9C5 /* TD_PingPongBalls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TD_PingPongBalls.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0403A5D9227ED23C0029C9C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0403A5DB227ED23C0029C9C5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		0403A5DD227ED23C0029C9C5 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		0403A5DF227ED23C0029C9C5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		0403A5E1227ED23C0029C9C5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		0403A5E4227ED23C0029C9C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0403A5E6227ED23D0029C9C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0403A5E9227ED23D0029C9C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0403A5EB227ED23D0029C9C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0403A5F0227ED23D0029C9C5 /* TD_PingPongBallsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TD_PingPongBallsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0403A5F4227ED23D0029C9C5 /* TD_PingPongBallsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_PingPongBallsTests.swift; sourceTree = "<group>"; };
+		0403A5F6227ED23D0029C9C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0403A5FB227ED23D0029C9C5 /* TD_PingPongBallsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TD_PingPongBallsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0403A5FF227ED23D0029C9C5 /* TD_PingPongBallsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TD_PingPongBallsUITests.swift; sourceTree = "<group>"; };
+		0403A601227ED23D0029C9C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0403A60D227ED42A0029C9C5 /* PrefixHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrefixHeader.swift; sourceTree = "<group>"; };
+		0403A613227ED47F0029C9C5 /* monsterMove_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = monsterMove_1.gif; sourceTree = "<group>"; };
+		0403A616227ED47F0029C9C5 /* Soldier.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Soldier.plist; sourceTree = "<group>"; };
+		0403A618227ED47F0029C9C5 /* Towers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Towers.plist; sourceTree = "<group>"; };
+		0403A619227ED47F0029C9C5 /* TowerList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TowerList.plist; sourceTree = "<group>"; };
+		0403A61C227ED47F0029C9C5 /* SceneRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SceneRecord.plist; sourceTree = "<group>"; };
+		0403A61D227ED47F0029C9C5 /* Scene.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Scene.plist; sourceTree = "<group>"; };
+		0403A61F227ED47F0029C9C5 /* Monster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Monster.plist; sourceTree = "<group>"; };
+		0403A625227ED47F0029C9C5 /* TD_BaseSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_BaseSpriteNode.swift; sourceTree = "<group>"; };
+		0403A627227ED47F0029C9C5 /* TD_BallsSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_BallsSprite.swift; sourceTree = "<group>"; };
+		0403A629227ED47F0029C9C5 /* TD_PathPlanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_PathPlanning.swift; sourceTree = "<group>"; };
+		0403A62A227ED47F0029C9C5 /* TD_AnalyticalDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_AnalyticalDataObject.swift; sourceTree = "<group>"; };
+		0403A62C227ED47F0029C9C5 /* TD_Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_Action.swift; sourceTree = "<group>"; };
+		0403A62E227ED47F0029C9C5 /* TD_BaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_BaseScene.swift; sourceTree = "<group>"; };
+		0403A62F227ED47F0029C9C5 /* TD_GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_GameScene.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0403A5D3227ED23C0029C9C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0403A5ED227ED23D0029C9C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0403A5F8227ED23D0029C9C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0403A5CD227ED23C0029C9C5 = {
+			isa = PBXGroup;
+			children = (
+				0403A5D8227ED23C0029C9C5 /* TD_PingPongBalls */,
+				0403A5F3227ED23D0029C9C5 /* TD_PingPongBallsTests */,
+				0403A5FE227ED23D0029C9C5 /* TD_PingPongBallsUITests */,
+				0403A5D7227ED23C0029C9C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0403A5D7227ED23C0029C9C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0403A5D6227ED23C0029C9C5 /* TD_PingPongBalls.app */,
+				0403A5F0227ED23D0029C9C5 /* TD_PingPongBallsTests.xctest */,
+				0403A5FB227ED23D0029C9C5 /* TD_PingPongBallsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0403A5D8227ED23C0029C9C5 /* TD_PingPongBalls */ = {
+			isa = PBXGroup;
+			children = (
+				0403A60F227ED47F0029C9C5 /* Classes */,
+				0403A5D9227ED23C0029C9C5 /* AppDelegate.swift */,
+				0403A5DB227ED23C0029C9C5 /* GameScene.sks */,
+				0403A5DD227ED23C0029C9C5 /* Actions.sks */,
+				0403A5DF227ED23C0029C9C5 /* GameScene.swift */,
+				0403A5E1227ED23C0029C9C5 /* GameViewController.swift */,
+				0403A60D227ED42A0029C9C5 /* PrefixHeader.swift */,
+				0403A5E3227ED23C0029C9C5 /* Main.storyboard */,
+				0403A5E6227ED23D0029C9C5 /* Assets.xcassets */,
+				0403A5E8227ED23D0029C9C5 /* LaunchScreen.storyboard */,
+				0403A5EB227ED23D0029C9C5 /* Info.plist */,
+			);
+			path = TD_PingPongBalls;
+			sourceTree = "<group>";
+		};
+		0403A5F3227ED23D0029C9C5 /* TD_PingPongBallsTests */ = {
+			isa = PBXGroup;
+			children = (
+				0403A5F4227ED23D0029C9C5 /* TD_PingPongBallsTests.swift */,
+				0403A5F6227ED23D0029C9C5 /* Info.plist */,
+			);
+			path = TD_PingPongBallsTests;
+			sourceTree = "<group>";
+		};
+		0403A5FE227ED23D0029C9C5 /* TD_PingPongBallsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0403A5FF227ED23D0029C9C5 /* TD_PingPongBallsUITests.swift */,
+				0403A601227ED23D0029C9C5 /* Info.plist */,
+			);
+			path = TD_PingPongBallsUITests;
+			sourceTree = "<group>";
+		};
+		0403A60F227ED47F0029C9C5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0403A610227ED47F0029C9C5 /* Resources */,
+				0403A620227ED47F0029C9C5 /* View */,
+				0403A621227ED47F0029C9C5 /* Sprite */,
+				0403A628227ED47F0029C9C5 /* Lib */,
+				0403A62D227ED47F0029C9C5 /* Scene */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		0403A610227ED47F0029C9C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0403A611227ED47F0029C9C5 /* Image */,
+				0403A614227ED47F0029C9C5 /* text */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0403A611227ED47F0029C9C5 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				0403A612227ED47F0029C9C5 /* Gif */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		0403A612227ED47F0029C9C5 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				0403A613227ED47F0029C9C5 /* monsterMove_1.gif */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
+		0403A614227ED47F0029C9C5 /* text */ = {
+			isa = PBXGroup;
+			children = (
+				0403A615227ED47F0029C9C5 /* Soldier */,
+				0403A617227ED47F0029C9C5 /* Towers */,
+				0403A61A227ED47F0029C9C5 /* Guard */,
+				0403A61B227ED47F0029C9C5 /* Scene */,
+				0403A61E227ED47F0029C9C5 /* Monster */,
+			);
+			path = text;
+			sourceTree = "<group>";
+		};
+		0403A615227ED47F0029C9C5 /* Soldier */ = {
+			isa = PBXGroup;
+			children = (
+				0403A616227ED47F0029C9C5 /* Soldier.plist */,
+			);
+			path = Soldier;
+			sourceTree = "<group>";
+		};
+		0403A617227ED47F0029C9C5 /* Towers */ = {
+			isa = PBXGroup;
+			children = (
+				0403A618227ED47F0029C9C5 /* Towers.plist */,
+				0403A619227ED47F0029C9C5 /* TowerList.plist */,
+			);
+			path = Towers;
+			sourceTree = "<group>";
+		};
+		0403A61A227ED47F0029C9C5 /* Guard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Guard;
+			sourceTree = "<group>";
+		};
+		0403A61B227ED47F0029C9C5 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0403A61C227ED47F0029C9C5 /* SceneRecord.plist */,
+				0403A61D227ED47F0029C9C5 /* Scene.plist */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		0403A61E227ED47F0029C9C5 /* Monster */ = {
+			isa = PBXGroup;
+			children = (
+				0403A61F227ED47F0029C9C5 /* Monster.plist */,
+			);
+			path = Monster;
+			sourceTree = "<group>";
+		};
+		0403A620227ED47F0029C9C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0403A621227ED47F0029C9C5 /* Sprite */ = {
+			isa = PBXGroup;
+			children = (
+				0403A625227ED47F0029C9C5 /* TD_BaseSpriteNode.swift */,
+				0403A627227ED47F0029C9C5 /* TD_BallsSprite.swift */,
+			);
+			path = Sprite;
+			sourceTree = "<group>";
+		};
+		0403A628227ED47F0029C9C5 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				0403A629227ED47F0029C9C5 /* TD_PathPlanning.swift */,
+				0403A62A227ED47F0029C9C5 /* TD_AnalyticalDataObject.swift */,
+				0403A62C227ED47F0029C9C5 /* TD_Action.swift */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		0403A62D227ED47F0029C9C5 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				0403A62E227ED47F0029C9C5 /* TD_BaseScene.swift */,
+				0403A62F227ED47F0029C9C5 /* TD_GameScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0403A5D5227ED23C0029C9C5 /* TD_PingPongBalls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0403A604227ED23D0029C9C5 /* Build configuration list for PBXNativeTarget "TD_PingPongBalls" */;
+			buildPhases = (
+				0403A5D2227ED23C0029C9C5 /* Sources */,
+				0403A5D3227ED23C0029C9C5 /* Frameworks */,
+				0403A5D4227ED23C0029C9C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TD_PingPongBalls;
+			productName = TD_PingPongBalls;
+			productReference = 0403A5D6227ED23C0029C9C5 /* TD_PingPongBalls.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0403A5EF227ED23D0029C9C5 /* TD_PingPongBallsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0403A607227ED23D0029C9C5 /* Build configuration list for PBXNativeTarget "TD_PingPongBallsTests" */;
+			buildPhases = (
+				0403A5EC227ED23D0029C9C5 /* Sources */,
+				0403A5ED227ED23D0029C9C5 /* Frameworks */,
+				0403A5EE227ED23D0029C9C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0403A5F2227ED23D0029C9C5 /* PBXTargetDependency */,
+			);
+			name = TD_PingPongBallsTests;
+			productName = TD_PingPongBallsTests;
+			productReference = 0403A5F0227ED23D0029C9C5 /* TD_PingPongBallsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0403A5FA227ED23D0029C9C5 /* TD_PingPongBallsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0403A60A227ED23D0029C9C5 /* Build configuration list for PBXNativeTarget "TD_PingPongBallsUITests" */;
+			buildPhases = (
+				0403A5F7227ED23D0029C9C5 /* Sources */,
+				0403A5F8227ED23D0029C9C5 /* Frameworks */,
+				0403A5F9227ED23D0029C9C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0403A5FD227ED23D0029C9C5 /* PBXTargetDependency */,
+			);
+			name = TD_PingPongBallsUITests;
+			productName = TD_PingPongBallsUITests;
+			productReference = 0403A5FB227ED23D0029C9C5 /* TD_PingPongBallsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0403A5CE227ED23C0029C9C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = DAA;
+				TargetAttributes = {
+					0403A5D5227ED23C0029C9C5 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					0403A5EF227ED23D0029C9C5 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0403A5D5227ED23C0029C9C5;
+					};
+					0403A5FA227ED23D0029C9C5 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 0403A5D5227ED23C0029C9C5;
+					};
+				};
+			};
+			buildConfigurationList = 0403A5D1227ED23C0029C9C5 /* Build configuration list for PBXProject "TD_PingPongBalls" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0403A5CD227ED23C0029C9C5;
+			productRefGroup = 0403A5D7227ED23C0029C9C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0403A5D5227ED23C0029C9C5 /* TD_PingPongBalls */,
+				0403A5EF227ED23D0029C9C5 /* TD_PingPongBallsTests */,
+				0403A5FA227ED23D0029C9C5 /* TD_PingPongBallsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0403A5D4227ED23C0029C9C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0403A635227ED47F0029C9C5 /* SceneRecord.plist in Resources */,
+				0403A632227ED47F0029C9C5 /* Soldier.plist in Resources */,
+				0403A631227ED47F0029C9C5 /* monsterMove_1.gif in Resources */,
+				0403A633227ED47F0029C9C5 /* Towers.plist in Resources */,
+				0403A5E5227ED23C0029C9C5 /* Main.storyboard in Resources */,
+				0403A5DC227ED23C0029C9C5 /* GameScene.sks in Resources */,
+				0403A5E7227ED23D0029C9C5 /* Assets.xcassets in Resources */,
+				0403A637227ED47F0029C9C5 /* Monster.plist in Resources */,
+				0403A636227ED47F0029C9C5 /* Scene.plist in Resources */,
+				0403A634227ED47F0029C9C5 /* TowerList.plist in Resources */,
+				0403A5EA227ED23D0029C9C5 /* LaunchScreen.storyboard in Resources */,
+				0403A5DE227ED23C0029C9C5 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0403A5EE227ED23D0029C9C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0403A5F9227ED23D0029C9C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0403A5D2227ED23C0029C9C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0403A60E227ED42B0029C9C5 /* PrefixHeader.swift in Sources */,
+				0403A63B227ED47F0029C9C5 /* TD_BaseSpriteNode.swift in Sources */,
+				0403A5E0227ED23C0029C9C5 /* GameScene.swift in Sources */,
+				0403A5E2227ED23C0029C9C5 /* GameViewController.swift in Sources */,
+				0403A642227ED47F0029C9C5 /* TD_BaseScene.swift in Sources */,
+				0403A63D227ED47F0029C9C5 /* TD_BallsSprite.swift in Sources */,
+				0403A5DA227ED23C0029C9C5 /* AppDelegate.swift in Sources */,
+				0403A643227ED47F0029C9C5 /* TD_GameScene.swift in Sources */,
+				0403A63F227ED47F0029C9C5 /* TD_AnalyticalDataObject.swift in Sources */,
+				0403A63E227ED47F0029C9C5 /* TD_PathPlanning.swift in Sources */,
+				0403A641227ED47F0029C9C5 /* TD_Action.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0403A5EC227ED23D0029C9C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0403A5F5227ED23D0029C9C5 /* TD_PingPongBallsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0403A5F7227ED23D0029C9C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0403A600227ED23D0029C9C5 /* TD_PingPongBallsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0403A5F2227ED23D0029C9C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0403A5D5227ED23C0029C9C5 /* TD_PingPongBalls */;
+			targetProxy = 0403A5F1227ED23D0029C9C5 /* PBXContainerItemProxy */;
+		};
+		0403A5FD227ED23D0029C9C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0403A5D5227ED23C0029C9C5 /* TD_PingPongBalls */;
+			targetProxy = 0403A5FC227ED23D0029C9C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0403A5E3227ED23C0029C9C5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0403A5E4227ED23C0029C9C5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0403A5E8227ED23D0029C9C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0403A5E9227ED23D0029C9C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0403A602227ED23D0029C9C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0403A603227ED23D0029C9C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0403A605227ED23D0029C9C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TD_PingPongBalls/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-PingPongBalls";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0403A606227ED23D0029C9C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TD_PingPongBalls/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-PingPongBalls";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0403A608227ED23D0029C9C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TD_PingPongBallsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-PingPongBallsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TD_PingPongBalls.app/TD_PingPongBalls";
+			};
+			name = Debug;
+		};
+		0403A609227ED23D0029C9C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TD_PingPongBallsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-PingPongBallsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TD_PingPongBalls.app/TD_PingPongBalls";
+			};
+			name = Release;
+		};
+		0403A60B227ED23D0029C9C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TD_PingPongBallsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-PingPongBallsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TD_PingPongBalls;
+			};
+			name = Debug;
+		};
+		0403A60C227ED23D0029C9C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TD_PingPongBallsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "DAA.TD-PingPongBallsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TD_PingPongBalls;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0403A5D1227ED23C0029C9C5 /* Build configuration list for PBXProject "TD_PingPongBalls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0403A602227ED23D0029C9C5 /* Debug */,
+				0403A603227ED23D0029C9C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0403A604227ED23D0029C9C5 /* Build configuration list for PBXNativeTarget "TD_PingPongBalls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0403A605227ED23D0029C9C5 /* Debug */,
+				0403A606227ED23D0029C9C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0403A607227ED23D0029C9C5 /* Build configuration list for PBXNativeTarget "TD_PingPongBallsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0403A608227ED23D0029C9C5 /* Debug */,
+				0403A609227ED23D0029C9C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0403A60A227ED23D0029C9C5 /* Build configuration list for PBXNativeTarget "TD_PingPongBallsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0403A60B227ED23D0029C9C5 /* Debug */,
+				0403A60C227ED23D0029C9C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0403A5CE227ED23C0029C9C5 /* Project object */;
+}

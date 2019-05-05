@@ -25,19 +25,16 @@
 		0403A5B9227EC3640029C9C5 /* SceneRecord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0403A5A0227EC3640029C9C5 /* SceneRecord.plist */; };
 		0403A5BA227EC3640029C9C5 /* Scene.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0403A5A1227EC3640029C9C5 /* Scene.plist */; };
 		0403A5BB227EC3640029C9C5 /* Monster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0403A5A3227EC3640029C9C5 /* Monster.plist */; };
-		0403A5BC227EC3640029C9C5 /* TD_EnergyBallSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5A6227EC3640029C9C5 /* TD_EnergyBallSprite.swift */; };
-		0403A5BD227EC3640029C9C5 /* TD_SelectScenarioSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5A7227EC3640029C9C5 /* TD_SelectScenarioSprite.swift */; };
-		0403A5BE227EC3640029C9C5 /* TD_TowerSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5A8227EC3640029C9C5 /* TD_TowerSprite.swift */; };
 		0403A5BF227EC3640029C9C5 /* TD_BaseSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5A9227EC3640029C9C5 /* TD_BaseSpriteNode.swift */; };
-		0403A5C0227EC3640029C9C5 /* TD_DefensiveTowersSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5AA227EC3640029C9C5 /* TD_DefensiveTowersSprite.swift */; };
-		0403A5C1227EC3640029C9C5 /* TD_MonsterSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5AB227EC3640029C9C5 /* TD_MonsterSprite.swift */; };
+		0403A5C1227EC3640029C9C5 /* TD_FlivverSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5AB227EC3640029C9C5 /* TD_FlivverSprite.swift */; };
 		0403A5C2227EC3640029C9C5 /* TD_PathPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5AD227EC3640029C9C5 /* TD_PathPlanning.swift */; };
 		0403A5C3227EC3640029C9C5 /* TD_AnalyticalDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5AE227EC3640029C9C5 /* TD_AnalyticalDataObject.swift */; };
 		0403A5C4227EC3640029C9C5 /* TD_PlayMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5AF227EC3640029C9C5 /* TD_PlayMusic.swift */; };
 		0403A5C5227EC3640029C9C5 /* TD_Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5B0227EC3640029C9C5 /* TD_Action.swift */; };
 		0403A5C6227EC3640029C9C5 /* TD_BaseScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5B2227EC3640029C9C5 /* TD_BaseScene.swift */; };
 		0403A5C7227EC3640029C9C5 /* TD_GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5B3227EC3640029C9C5 /* TD_GameScene.swift */; };
-		0403A5C8227EC3640029C9C5 /* TD_ScenarioScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5B4227EC3640029C9C5 /* TD_ScenarioScene.swift */; };
+		0403A5CA227ECC690029C9C5 /* TD_SelectScenarioSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5C9227ECC690029C9C5 /* TD_SelectScenarioSprite.swift */; };
+		0403A5CC227ECCB60029C9C5 /* TD_ScenarioScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0403A5CB227ECCB60029C9C5 /* TD_ScenarioScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,19 +79,16 @@
 		0403A5A0227EC3640029C9C5 /* SceneRecord.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SceneRecord.plist; sourceTree = "<group>"; };
 		0403A5A1227EC3640029C9C5 /* Scene.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Scene.plist; sourceTree = "<group>"; };
 		0403A5A3227EC3640029C9C5 /* Monster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Monster.plist; sourceTree = "<group>"; };
-		0403A5A6227EC3640029C9C5 /* TD_EnergyBallSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_EnergyBallSprite.swift; sourceTree = "<group>"; };
-		0403A5A7227EC3640029C9C5 /* TD_SelectScenarioSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_SelectScenarioSprite.swift; sourceTree = "<group>"; };
-		0403A5A8227EC3640029C9C5 /* TD_TowerSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_TowerSprite.swift; sourceTree = "<group>"; };
 		0403A5A9227EC3640029C9C5 /* TD_BaseSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_BaseSpriteNode.swift; sourceTree = "<group>"; };
-		0403A5AA227EC3640029C9C5 /* TD_DefensiveTowersSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_DefensiveTowersSprite.swift; sourceTree = "<group>"; };
-		0403A5AB227EC3640029C9C5 /* TD_MonsterSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_MonsterSprite.swift; sourceTree = "<group>"; };
+		0403A5AB227EC3640029C9C5 /* TD_FlivverSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_FlivverSprite.swift; sourceTree = "<group>"; };
 		0403A5AD227EC3640029C9C5 /* TD_PathPlanning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_PathPlanning.swift; sourceTree = "<group>"; };
 		0403A5AE227EC3640029C9C5 /* TD_AnalyticalDataObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_AnalyticalDataObject.swift; sourceTree = "<group>"; };
 		0403A5AF227EC3640029C9C5 /* TD_PlayMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_PlayMusic.swift; sourceTree = "<group>"; };
 		0403A5B0227EC3640029C9C5 /* TD_Action.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_Action.swift; sourceTree = "<group>"; };
 		0403A5B2227EC3640029C9C5 /* TD_BaseScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_BaseScene.swift; sourceTree = "<group>"; };
 		0403A5B3227EC3640029C9C5 /* TD_GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_GameScene.swift; sourceTree = "<group>"; };
-		0403A5B4227EC3640029C9C5 /* TD_ScenarioScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_ScenarioScene.swift; sourceTree = "<group>"; };
+		0403A5C9227ECC690029C9C5 /* TD_SelectScenarioSprite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_SelectScenarioSprite.swift; sourceTree = "<group>"; };
+		0403A5CB227ECCB60029C9C5 /* TD_ScenarioScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TD_ScenarioScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,12 +272,9 @@
 		0403A5A5227EC3640029C9C5 /* Sprite */ = {
 			isa = PBXGroup;
 			children = (
-				0403A5A6227EC3640029C9C5 /* TD_EnergyBallSprite.swift */,
-				0403A5A7227EC3640029C9C5 /* TD_SelectScenarioSprite.swift */,
-				0403A5A8227EC3640029C9C5 /* TD_TowerSprite.swift */,
 				0403A5A9227EC3640029C9C5 /* TD_BaseSpriteNode.swift */,
-				0403A5AA227EC3640029C9C5 /* TD_DefensiveTowersSprite.swift */,
-				0403A5AB227EC3640029C9C5 /* TD_MonsterSprite.swift */,
+				0403A5AB227EC3640029C9C5 /* TD_FlivverSprite.swift */,
+				0403A5C9227ECC690029C9C5 /* TD_SelectScenarioSprite.swift */,
 			);
 			path = Sprite;
 			sourceTree = "<group>";
@@ -304,7 +295,7 @@
 			children = (
 				0403A5B2227EC3640029C9C5 /* TD_BaseScene.swift */,
 				0403A5B3227EC3640029C9C5 /* TD_GameScene.swift */,
-				0403A5B4227EC3640029C9C5 /* TD_ScenarioScene.swift */,
+				0403A5CB227ECCB60029C9C5 /* TD_ScenarioScene.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -451,18 +442,15 @@
 			files = (
 				0403A5C4227EC3640029C9C5 /* TD_PlayMusic.swift in Sources */,
 				0403A590227EC1F70029C9C5 /* PrefixHeader.swift in Sources */,
+				0403A5CA227ECC690029C9C5 /* TD_SelectScenarioSprite.swift in Sources */,
 				0403A5BF227EC3640029C9C5 /* TD_BaseSpriteNode.swift in Sources */,
 				0403A562227EBEB50029C9C5 /* GameScene.swift in Sources */,
-				0403A5BD227EC3640029C9C5 /* TD_SelectScenarioSprite.swift in Sources */,
 				0403A564227EBEB50029C9C5 /* GameViewController.swift in Sources */,
-				0403A5BC227EC3640029C9C5 /* TD_EnergyBallSprite.swift in Sources */,
 				0403A5C6227EC3640029C9C5 /* TD_BaseScene.swift in Sources */,
-				0403A5C8227EC3640029C9C5 /* TD_ScenarioScene.swift in Sources */,
-				0403A5C0227EC3640029C9C5 /* TD_DefensiveTowersSprite.swift in Sources */,
-				0403A5C1227EC3640029C9C5 /* TD_MonsterSprite.swift in Sources */,
-				0403A5BE227EC3640029C9C5 /* TD_TowerSprite.swift in Sources */,
+				0403A5C1227EC3640029C9C5 /* TD_FlivverSprite.swift in Sources */,
 				0403A55C227EBEB50029C9C5 /* AppDelegate.swift in Sources */,
 				0403A5C7227EC3640029C9C5 /* TD_GameScene.swift in Sources */,
+				0403A5CC227ECCB60029C9C5 /* TD_ScenarioScene.swift in Sources */,
 				0403A5C3227EC3640029C9C5 /* TD_AnalyticalDataObject.swift in Sources */,
 				0403A5C2227EC3640029C9C5 /* TD_PathPlanning.swift in Sources */,
 				0403A5C5227EC3640029C9C5 /* TD_Action.swift in Sources */,
