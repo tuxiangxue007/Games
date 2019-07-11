@@ -241,4 +241,8 @@ class TD_MonsterSprite: TD_BaseSpriteNode {
         let arm = armor + temporaryDebuffArmor
         return damage * pow(0.95, arm)
     }
+    // MARK: 类销毁时，通知此方法
+    deinit {
+        print("销毁")
+    }
 }

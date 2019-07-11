@@ -62,4 +62,8 @@ class TD_BaseSpriteNode: SKSpriteNode {
         }
         return images.map {SKTexture(cgImage:$0)}
     }
+    // MARK: 类销毁时，通知此方法
+    deinit {
+        print("销毁")
+    }
 }

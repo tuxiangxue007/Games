@@ -326,7 +326,7 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
     }
     
     func creatMonsterSprte(type:String){
-        let monsterSprite = TD_MonsterSprite(imageNamed: String(format: "monster_%@", type));
+        var monsterSprite = TD_MonsterSprite(imageNamed: String(format: "monster_%@", type));
         monsterSprite.size = CGSize(width: TD_Block_Width, height: TD_Block_Width)
         monsterSprite.position = startPoint
         if type == "1"{
@@ -444,7 +444,11 @@ class TD_ScenarioScene: TD_BaseScene ,SKPhysicsContactDelegate {
         
         let i = monsterSpriteList.index(of: monster)
         if i != nil{
+//            monster = nil
+            var m:TD_MonsterSprite? = monsterSpriteList[i!]
             monsterSpriteList.remove(at: i!)
+            m = nil
+            
         }
         
         for i in 0..<towersList.count {
